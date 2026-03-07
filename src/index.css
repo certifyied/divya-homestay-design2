@@ -126,12 +126,12 @@
       @apply px-20;
     }
   }
-
+/* 
   .text-display-xl {
     font-family: 'Playfair Display', serif;
     @apply text-7xl font-medium italic leading-[0.9] tracking-tight;
   }
-  
+   */
   @media (min-width: 768px) {
     .text-display-xl {
       @apply text-8xl;

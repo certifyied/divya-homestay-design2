@@ -35,7 +35,7 @@ const Contact = () => {
           >
             <h1 className="text-display-lg mb-8">Let's Talk</h1>
             <p className="text-body-lg">
-              Ready to transform your space? We'd love to hear about your project. 
+              Ready to transform your space? We'd love to hear about your project.
               Reach out and let's start the conversation.
             </p>
           </motion.div>
@@ -92,7 +92,14 @@ const Contact = () => {
                     required
                   />
                 </div>
-                <button type="submit" className="btn-primary inline-flex items-center gap-2">
+                {/* <button type="submit" className="btn-primary inline-flex items-center gap-2">
+                  Send Message
+                  <ArrowUpRight className="w-4 h-4" />
+                </button> */}
+                <button
+                  type="submit"
+                  className="inline-flex items-center gap-2 px-10 py-4 bg-black text-white text-sm tracking-widest uppercase transition-all duration-500 hover:bg-transparent hover:text-black border border-black"
+                >
                   Send Message
                   <ArrowUpRight className="w-4 h-4" />
                 </button>
@@ -106,7 +113,7 @@ const Contact = () => {
               viewport={{ once: true }}
             >
               <h2 className="text-section-title mb-8">Contact Information</h2>
-              
+
               <div className="space-y-8">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-secondary rounded-xl flex items-center justify-center flex-shrink-0">

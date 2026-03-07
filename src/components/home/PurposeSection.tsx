@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import architectureModel from '@/assets/architecture-model.jpg';
+import architectureModel from '@/assets/2497d151-2e7d-4570-a623-79110dfa16a0.webp';
 
 const stats = [
   { number: '10', suffix: '+', label: 'Years in Design' },
@@ -12,13 +12,13 @@ const PurposeSection = () => {
     <section className="py-16 md:py-24">
       <div className="container-wide">
         <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-display-lg mb-16 md:mb-24"
-        >
-          We Design With Purpose
-        </motion.h2>
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  className="text-display-lg text-[#164e63] mb-16 md:mb-24"
+>
+  We Design With Purpose
+</motion.h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
           {/* Stats */}

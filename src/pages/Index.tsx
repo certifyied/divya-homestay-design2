@@ -4,15 +4,19 @@ import RoomTypesSection from '@/components/home/RoomTypesSection';
 import WhatWeOfferSection from '@/components/home/WhatWeOfferSection';
 import PurposeSection from '@/components/home/PurposeSection';
 import ProjectsSection from '@/components/home/ProjectsSection';
+import SecondHeroSection from '@/components/home/secondHerosection';
+import ExperienceSection from '@/components/home/ExperienceSection';
 
 const Index = () => {
   return (
     <Layout>
       <HeroSection />
+      <SecondHeroSection/>
       <RoomTypesSection />
+      <ProjectsSection />
       <WhatWeOfferSection />
       <PurposeSection />
-      <ProjectsSection />
+      <ExperienceSection/>
     </Layout>
   );
 };
