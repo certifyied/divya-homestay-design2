@@ -335,7 +335,7 @@ const Header = () => {
               <img
                 src={logo}
                 alt="Logo"
-                className="h-[55px] sm:h-[65px] md:h-[140px] lg:h-[180px] w-auto object-contain"
+                className="h-[90px] sm:h-[65px] md:h-[140px] lg:h-[180px] w-auto object-contain"
               />
             </Link>
 
