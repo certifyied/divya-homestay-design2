@@ -83,31 +83,21 @@
 
 // export default WhatWeOfferSection;
 
-
-
 import { motion } from "framer-motion";
-import {
-  Sparkles,
-  Utensils,
-  Users,
-  Mountain,
-  Car,
-  Baby,
-  Flame,
-  Waves,
-  Dumbbell,
-} from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
+
+/* Amenity Images */
+import pool from "@/assets/2497d151-2e7d-4570-a623-79110dfa16a0.webp";
+import restaurant from "@/assets/2497d151-2e7d-4570-a623-79110dfa16a0.webp";
+import games from "@/assets/2497d151-2e7d-4570-a623-79110dfa16a0.webp";
+import dinner from "@/assets/2497d151-2e7d-4570-a623-79110dfa16a0.webp";
+import { Link } from "react-router-dom";
 
 const amenities = [
-  { icon: Sparkles, title: "Ayurvedic Spa" },
-  { icon: Utensils, title: "Exclusive Dining" },
-  { icon: Users, title: "Meetings & Events" },
-  { icon: Mountain, title: "360-Degree Tea Plantation View" },
-  { icon: Car, title: "Free Parking" },
-  { icon: Baby, title: "Kids Play Area" },
-  { icon: Flame, title: "Campfire with Music" },
-  { icon: Waves, title: "Swimming Pool" },
-  { icon: Dumbbell, title: "Gym" },
+  { img: pool, title: "SWIMMING POOL" },
+  { img: restaurant, title: "RESTAURANT" },
+  { img: games, title: "INDOOR GAMES" },
+  { img: dinner, title: "FAMILY THEME DINNER" },
 ];
 
 const WhatWeOfferSection = () => {
@@ -122,7 +112,7 @@ const WhatWeOfferSection = () => {
           viewport={{ once: true }}
           className="text-4xl md:text-5xl font-serif text-[#164e63] mb-6"
         >
-          Hotel Amenities
+          Our Facilities
         </motion.h2>
 
         {/* Description */}
@@ -139,29 +129,51 @@ const WhatWeOfferSection = () => {
           and cherished memories.
         </motion.p>
 
-        {/* Amenities */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-y-16">
-
+        {/* Image Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {amenities.map((item, index) => (
             <motion.div
               key={item.title}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.05 }}
+              transition={{ delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="flex flex-col items-center"
+              className="relative overflow-hidden group"
             >
-              {/* Icon */}
-              <item.icon className="w-12 h-12 text-[#164e63] mb-4" />
+              {/* Image */}
+              <img
+                src={item.img}
+                alt={item.title}
+                className="w-full h-[520px] object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+
+              {/* Bottom Gradient */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#f5f5f5] via-transparent to-transparent"></div>
 
               {/* Title */}
-              <h3 className="text-lg font-serif text-gray-700">
-                {item.title}
-              </h3>
+              <div className="absolute bottom-10 left-0 right-0 text-center">
+                <h3 className="text-[#164e63] tracking-[0.2em] text-sm font-medium">
+                  {item.title}
+                </h3>
+                <div className="w-12 h-[2px] bg-[#164e63] mx-auto mt-2"></div>
+              </div>
             </motion.div>
           ))}
-
         </div>
+
+        {/* Button */}
+        <section className="py-16 px-6">
+          <div className="max-w-4xl mx-auto text-center">
+            {/* Link Button */}
+            <Link
+              to="/facilities"
+              className="inline-block px-8 py-3 border border-[#164e63] text-[#164e63] uppercase tracking-[0.2em] text-sm font-medium hover:bg-[#164e63] hover:text-white transition-all duration-300"
+            >
+              View All Facilities
+            </Link>
+
+          </div>
+        </section>
 
       </div>
     </section>

@@ -70,21 +70,19 @@
 // };
 
 // export default RoomTypesSection;
-
-
 import React from "react";
 
 const rooms = [
   {
-    title: "Jacuzzi 180 Degree Suite",
+    title: "JACUZZI 180 DEGREE SUITE",
     img: "https://images.unsplash.com/photo-1560185127-6ed189bf02f4",
   },
   {
-    title: "Premium Club Suite",
+    title: "PREMIUM CLUB SUITE",
     img: "https://images.unsplash.com/photo-1618773928121-c32242e63f39",
   },
   {
-    title: "Classic AC Room",
+    title: "CLASSIC AC ROOM",
     img: "https://images.unsplash.com/photo-1590490360182-c33d57733427",
   },
 ];
@@ -99,36 +97,33 @@ function RoomTypesSection() {
           Our Room Types
         </h2>
 
+        {/* Rooms Grid */}
         <div className="grid md:grid-cols-3 gap-8">
-
           {rooms.map((room, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden shadow-lg"
+              className="relative overflow-hidden shadow-lg"
             >
 
-              {/* Image */}
+              {/* Room Image */}
               <img
                 src={room.img}
                 alt={room.title}
-                className="w-full h-[420px] object-cover transition-transform duration-500 group-hover:scale-110"
+                className="w-full h-[420px] object-cover"
               />
 
-              {/* Default bottom gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+              {/* Bottom Fade Gradient */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
 
-              {/* Hover Bottom Fade Overlay */}
-              <div className="absolute bottom-0 left-0 w-full h-24 opacity-0 group-hover:opacity-100 bg-gradient-to-t from-[#164e63] via-[#164e63]/80 to-transparent transition-all duration-500"></div>
-
-              {/* Text */}
-              <div className="absolute bottom-6 left-6 text-white text-2xl font-serif z-10">
+              {/* Bottom Center Title */}
+              <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white text-md uppercase tracking-wider text-center px-4">
                 {room.title}
               </div>
 
             </div>
           ))}
-
         </div>
+
       </div>
     </section>
   );

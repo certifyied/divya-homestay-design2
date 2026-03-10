@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import architectureModel from '@/assets/2497d151-2e7d-4570-a623-79110dfa16a0.webp';
+import architectureModel from '@/assets/KB-Glamps-Murree-(1) (1).jpeg';
 
 const stats = [
   { number: '10', suffix: '+', label: 'Years in Design' },
@@ -12,13 +12,13 @@ const PurposeSection = () => {
     <section className="py-16 md:py-24">
       <div className="container-wide">
         <motion.h2
-  initial={{ opacity: 0, y: 30 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true }}
-  className="text-display-lg text-[#164e63] mb-16 md:mb-24"
->
-  We Design With Purpose
-</motion.h2>
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-display-lg text-[#164e63] mb-16 md:mb-24"
+        >
+          We Design With Purpose
+        </motion.h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
           {/* Stats */}
@@ -47,17 +47,18 @@ const PurposeSection = () => {
             viewport={{ once: true }}
             className="lg:col-span-8"
           >
-            <div className="relative">
-              <div className="rounded-2xl overflow-hidden">
+            <div className="relative max-w-3xl mx-auto">
+              <div className="overflow-hidden">
                 <img
                   src={architectureModel}
                   alt="3D architectural model"
-                  className="w-full h-auto object-cover"
+                  className="w-full h-[420px] object-cover"
                 />
               </div>
+
               <div className="mt-6 max-w-sm ml-auto text-right">
                 <p className="text-body text-muted-foreground">
-                  Every detail is intentional — combining aesthetics with{' '}
+                  Every detail is intentional — combining aesthetics with{" "}
                   <span className="text-foreground font-medium">real-life function.</span>
                 </p>
               </div>

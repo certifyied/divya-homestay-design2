@@ -153,67 +153,35 @@ const ProjectsSection = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center text-white text-4xl md:text-5xl font-serif mb-16"
+          className="text-center text-white text-4xl md:text-5xl mb-16"
         >
-          Accommodation
+          A C C O M M O D A T I O N
         </motion.h2>
 
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
 
-          {/* LEFT BIG IMAGE */}
+          {/* LEFT BIG IMAGE + TEXT */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="md:col-span-7"
+            className="md:col-span-7 flex flex-col gap-6"
           >
-            <div className="aspect-[16/10] overflow-hidden rounded-xl">
+            <div className="aspect-[16/10] overflow-hidden">
               <img
                 src={projects[0].image}
                 alt={projects[0].title}
                 className="w-full h-full object-cover hover:scale-105 transition duration-700"
               />
             </div>
-          </motion.div>
 
-          {/* RIGHT SIDE */}
-          <div className="md:col-span-5 flex flex-col gap-6">
-
-            {/* TOP SMALL IMAGE */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="aspect-[16/9] overflow-hidden rounded-xl"
-            >
-              <img
-                src={projects[1].image}
-                alt={projects[1].title}
-                className="w-full h-full object-cover hover:scale-105 transition duration-700"
-              />
-            </motion.div>
-
-            {/* SECOND SMALL IMAGE */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="aspect-[16/9] overflow-hidden rounded-xl"
-            >
-              <img
-                src={projects[2].image}
-                alt={projects[2].title}
-                className="w-full h-full object-cover hover:scale-105 transition duration-700"
-              />
-            </motion.div>
-
-            {/* TEXT */}
+            {/* TEXT UNDER BIG IMAGE */}
             <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              className="text-white/90 leading-relaxed text-lg mt-2"
+              className="text-white/90 leading-relaxed text-lg"
             >
               With 18 distinct room categories, our resort offers luxurious
               accommodations designed to provide comfort, elegance, and
@@ -230,7 +198,25 @@ const ProjectsSection = () => {
               View All
               <ArrowUpRight className="w-4 h-4" />
             </Link>
+          </motion.div>
 
+          {/* RIGHT SIDE SMALL IMAGES */}
+          <div className="md:col-span-5 flex flex-col gap-6">
+            {projects.slice(1).map((proj, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="aspect-[16/9] overflow-hidden"
+              >
+                <img
+                  src={proj.image}
+                  alt={proj.title}
+                  className="w-full h-full object-cover hover:scale-105 transition duration-700"
+                />
+              </motion.div>
+            ))}
           </div>
         </div>
       </div>

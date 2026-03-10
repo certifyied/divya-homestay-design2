@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const experiences = [
   {
@@ -75,7 +76,7 @@ function ExperienceSection() {
   return (
     <section className="py-20 bg-gray-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-4xl font-semibold mb-12 text-center">
+        <h2 className="text-4xl font-semibold mb-12 text-center text-[#164e63]">
           Signature Experiences
         </h2>
 
@@ -131,10 +132,13 @@ function ExperienceSection() {
         </div>
 
         <div className="flex justify-center mt-14">
-          <button className="flex items-center gap-2 px-8 py-3 border border-[#164e63] text-[#164e63] tracking-wide transition-all duration-300 hover:bg-[#164e63] hover:text-white">
+          <Link
+            to="/experience"
+            className="flex items-center gap-2 px-8 py-3 border border-[#164e63] text-[#164e63] tracking-wide transition-all duration-300 hover:bg-[#164e63] hover:text-white"
+          >
             View All Experiences
             <ArrowUpRight className="w-4 h-4" />
-          </button>
+          </Link>
         </div>
       </div>
     </section>

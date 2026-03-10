@@ -157,74 +157,148 @@
 
 
 
-import { motion, AnimatePresence } from "framer-motion";
+// import { motion, AnimatePresence } from "framer-motion";
+// import { Link } from "react-router-dom";
+// import { ArrowDown, ChevronLeft, ChevronRight } from "lucide-react";
+// import { useState, useEffect } from "react";
+
+// import hero1 from "@/assets/DSC03642.jpg";
+// import hero2 from "@/assets/202401181517465037-e51c70e2-047e-43d2-a87f-85e2d4a637fa.avif";
+// import hero3 from "@/assets/KB-Glamps-Murree-(1) (1).jpeg";
+
+// const images = [hero1, hero2, hero3];
+
+// const HeroSection = () => {
+//   const [index, setIndex] = useState(0);
+
+//   // Auto slide
+//   useEffect(() => {
+//     const interval = setInterval(() => {
+//       setIndex((prev) => (prev + 1) % images.length);
+//     }, 5000);
+
+//     return () => clearInterval(interval);
+//   }, []);
+
+//   // Manual controls
+//   const nextSlide = () => {
+//     setIndex((prev) => (prev + 1) % images.length);
+//   };
+
+//   const prevSlide = () => {
+//     setIndex((prev) => (prev - 1 + images.length) % images.length);
+//   };
+
+//   return (
+//     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+
+//       {/* Background Slider */}
+//       <div className="absolute inset-0">
+//         <AnimatePresence>
+//           <motion.img
+//             key={index}
+//             src={images[index]}
+//             alt="Luxury homestay"
+//             initial={{ opacity: 0, scale: 1.05 }}
+//             animate={{ opacity: 1, scale: 1 }}
+//             exit={{ opacity: 0 }}
+//             transition={{ duration: 1 }}
+//             className="absolute inset-0 w-full h-full object-cover"
+//           />
+//         </AnimatePresence>
+
+//         <div className="absolute inset-0 bg-black/40"></div>
+//       </div>
+
+//       LEFT BUTTON
+//       <button
+//         onClick={prevSlide}
+//         className="absolute left-6 top-1/2 -translate-y-1/2 z-20 bg-white/20 backdrop-blur-md p-3 rounded-full hover:bg-white/40 transition"
+//       >
+//         <ChevronLeft className="text-white w-6 h-6" />
+//       </button>
+
+//       {/* RIGHT BUTTON */}
+//       <button
+//         onClick={nextSlide}
+//         className="absolute right-6 top-1/2 -translate-y-1/2 z-20 bg-white/20 backdrop-blur-md p-3 rounded-full hover:bg-white/40 transition"
+//       >
+//         <ChevronRight className="text-white w-6 h-6" />
+//       </button>
+
+//       {/* Content */}
+//       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
+
+//         <motion.p
+//           initial={{ opacity: 0, y: 20 }}
+//           animate={{ opacity: 1, y: 0 }}
+//           transition={{ duration: 0.6 }}
+//           className="text-xs sm:text-sm tracking-[0.3em] uppercase text-white/80 mb-4"
+//         >
+//           Welcome to
+//         </motion.p>
+
+//         <motion.h1
+//           initial={{ opacity: 0, y: 30 }}
+//           animate={{ opacity: 1, y: 0 }}
+//           transition={{ duration: 0.8 }}
+//           className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-white mb-6 leading-tight"
+//         >
+//           Pendora Glamps
+//         </motion.h1>
+
+//         <motion.p
+//           initial={{ opacity: 0, y: 30 }}
+//           animate={{ opacity: 1, y: 0 }}
+//           transition={{ duration: 0.9 }}
+//           className="text-sm sm:text-base md:text-xl text-white/90 max-w-2xl mx-auto mb-10 leading-relaxed"
+//         >
+//           Escape to serenity. Nestled among misty mountains and lush greenery,
+//           experience the warmth of home in the heart of nature.
+//         </motion.p>
+
+//         <div className="flex flex-col sm:flex-row gap-4 justify-center">
+//           <Link to="/projects">
+//             <button className="px-8 py-3 sm:py-4 bg-[#164e63] text-white  tracking-widest transition-all duration-300 hover:bg-[#0f4c5c]">
+//               EXPLORE ROOMS
+//             </button>
+//           </Link>
+//         </div>
+//       </div>
+
+//       {/* Scroll Icon */}
+//       <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
+//         <ArrowDown className="w-6 h-6 text-white/70 animate-bounce" />
+//       </div>
+
+//     </section>
+//   );
+// };
+
+// export default HeroSection;
+
+
+
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowDown, ChevronLeft, ChevronRight } from "lucide-react";
-import { useState, useEffect } from "react";
+import { ArrowDown } from "lucide-react";
 
 import hero1 from "@/assets/DSC03642.jpg";
-import hero2 from "@/assets/202401181517465037-e51c70e2-047e-43d2-a87f-85e2d4a637fa.avif";
-import hero3 from "@/assets/KB-Glamps-Murree-(1) (1).jpeg";
-
-const images = [hero1, hero2, hero3];
 
 const HeroSection = () => {
-  const [index, setIndex] = useState(0);
-
-  // Auto slide
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % images.length);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  // Manual controls
-  const nextSlide = () => {
-    setIndex((prev) => (prev + 1) % images.length);
-  };
-
-  const prevSlide = () => {
-    setIndex((prev) => (prev - 1 + images.length) % images.length);
-  };
-
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
 
-      {/* Background Slider */}
+      {/* Background Image */}
       <div className="absolute inset-0">
-        <AnimatePresence>
-          <motion.img
-            key={index}
-            src={images[index]}
-            alt="Luxury homestay"
-            initial={{ opacity: 0, scale: 1.05 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1 }}
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-        </AnimatePresence>
+        <img
+          src={hero1}
+          alt="Luxury homestay"
+          className="w-full h-full object-cover"
+        />
 
         <div className="absolute inset-0 bg-black/40"></div>
       </div>
-
-      {/* LEFT BUTTON */}
-      <button
-        onClick={prevSlide}
-        className="absolute left-6 top-1/2 -translate-y-1/2 z-20 bg-white/20 backdrop-blur-md p-3 rounded-full hover:bg-white/40 transition"
-      >
-        <ChevronLeft className="text-white w-6 h-6" />
-      </button>
-
-      {/* RIGHT BUTTON */}
-      <button
-        onClick={nextSlide}
-        className="absolute right-6 top-1/2 -translate-y-1/2 z-20 bg-white/20 backdrop-blur-md p-3 rounded-full hover:bg-white/40 transition"
-      >
-        <ChevronRight className="text-white w-6 h-6" />
-      </button>
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
@@ -259,11 +333,12 @@ const HeroSection = () => {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link to="/projects">
-            <button className="px-8 py-3 sm:py-4 bg-[#164e63] text-white  tracking-widest transition-all duration-300 hover:bg-[#0f4c5c]">
+            <button className="px-8 py-3 sm:py-4 bg-[#164e63] text-white tracking-widest transition-all duration-300 hover:bg-[#0f4c5c]">
               EXPLORE ROOMS
             </button>
           </Link>
         </div>
+
       </div>
 
       {/* Scroll Icon */}
