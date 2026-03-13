@@ -1,129 +1,77 @@
-// import { motion } from 'framer-motion';
-// import { ArrowUpRight } from 'lucide-react';
-// import { Link } from 'react-router-dom';
-// import roomKitchen from '@/assets/room-kitchen.png';
-// import roomBedroom from '@/assets/room-bedroom.png';
-// import roomLiving from '@/assets/room-living.png';
-// import roomAnteroom from '@/assets/room-anteroom.png';
-
-// const rooms = [
-//   { name: 'Kitchen', image: roomKitchen },
-//   { name: 'Bed-Room', image: roomBedroom },
-//   { name: 'Living-Room', image: roomLiving },
-//   { name: 'Ante-Room', image: roomAnteroom },
-// ];
-
-// const RoomTypesSection = () => {
-//   return (
-//     <section className="py-16 md:py-24">
-//       <div className="container-wide">
-//         {/* Header */}
-//         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-12">
-//           <motion.h2
-//             initial={{ opacity: 0, y: 20 }}
-//             whileInView={{ opacity: 1, y: 0 }}
-//             viewport={{ once: true }}
-//             className="text-section-title"
-//           >
-//             Choose Type Room
-//           </motion.h2>
-//           <motion.div
-//             initial={{ opacity: 0, y: 20 }}
-//             whileInView={{ opacity: 1, y: 0 }}
-//             viewport={{ once: true }}
-//             transition={{ delay: 0.1 }}
-//           >
-//             {/* <Link to="/projects" className="link-arrow mt-4 md:mt-0">
-//               See All Rooms
-//               <ArrowUpRight className="w-4 h-4" />
-//             </Link> */}
-//           </motion.div>
-//         </div>
-
-//         {/* Room Cards Grid */}
-//         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-//           {rooms.map((room, index) => (
-//             <motion.div
-//               key={room.name}
-//               initial={{ opacity: 0, y: 30 }}
-//               whileInView={{ opacity: 1, y: 0 }}
-//               viewport={{ once: true }}
-//               transition={{ delay: index * 0.1 }}
-//               className="card-room group"
-//             >
-//               <div className="aspect-square relative overflow-hidden rounded-xl bg-sand/50 mb-4">
-//                 <img
-//                   src={room.image}
-//                   alt={`${room.name} isometric illustration`}
-//                   className="w-full h-full object-contain p-4 transition-transform duration-500 group-hover:scale-105"
-//                 />
-//               </div>
-//               <p className="text-sm md:text-base font-medium uppercase tracking-wider">
-//                 {room.name}
-//               </p>
-//             </motion.div>
-//           ))}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default RoomTypesSection;
 import React from "react";
+
+import domeRetreat from "@/assets/ABC04057 (1) (1).jpg";
+import panoramaDeck from "@/assets/ABC04008.jpg";
+import natureWalkway from "@/assets/ABC04045.jpg";
 
 const rooms = [
   {
-    title: "JACUZZI 180 DEGREE SUITE",
-    img: "https://images.unsplash.com/photo-1560185127-6ed189bf02f4",
+    title: "Scenic Hilltop Dome Retreat",
+    img: domeRetreat,
+    desc: "Experience a unique stay in a beautifully designed dome nestled in the hills, offering breathtaking night views and a peaceful atmosphere surrounded by nature.",
   },
   {
-    title: "PREMIUM CLUB SUITE",
-    img: "https://images.unsplash.com/photo-1618773928121-c32242e63f39",
+    title: "Elevated Panorama Deck",
+    img: panoramaDeck,
+    desc: "Relax on a spacious elevated deck with stunning panoramic views of the surrounding greenery, creating the perfect spot to unwind and enjoy the serenity of nature.",
   },
   {
-    title: "CLASSIC AC ROOM",
-    img: "https://images.unsplash.com/photo-1590490360182-c33d57733427",
+    title: "Peaceful Nature Walkways",
+    img: natureWalkway,
+    desc: "Take a refreshing walk along scenic pathways that wind through lush tea plantations, offering guests a calm and rejuvenating connection with nature.",
   },
 ];
 
 function RoomTypesSection() {
   return (
-    <section className="bg-gray-100 py-20 px-6">
-      <div className="max-w-7xl mx-auto">
+    <section className="bg-[#f5f5f3] py-20 px-6">
+      <div className="max-w-5xl mx-auto text-center">
 
-        {/* Section Title */}
-        <h2 className="text-4xl md:text-5xl font-serif text-center mb-14 text-[#164e63]">
-          Our Room Types
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-[#164e63] leading-tight mb-8">
+          Pendora Glamps: Elevate Your Escape in
+          Munnar's Panoramic Paradise
         </h2>
 
-        {/* Rooms Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
-          {rooms.map((room, index) => (
-            <div
-              key={index}
-              className="relative overflow-hidden shadow-lg"
-            >
+        <p className="text-gray-700 text-sm sm:text-base leading-relaxed mb-6">
+          Pendora Glamps in Munnar offers a luxurious escape blending modern
+          amenities with stunning natural beauty. Positioned for panoramic
+          views of lush tea plantations, this premier resort near
+          Chithirapuram is perfect for travelers seeking a unique stay.
+        </p>
 
-              {/* Room Image */}
+        <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
+          With 18 room categories, guests enjoy diverse, opulent
+          accommodations. The resort features a multi-cuisine restaurant
+          serving a variety of delectable dishes, a spa offering rejuvenating
+          treatments, and well-equipped banquet facilities for events.
+        </p>
+
+      </div>
+
+      <div className="max-w-7xl mx-auto mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+        {rooms.map((room, index) => (
+          <div key={index} className="text-center">
+
+            <div className="relative">
               <img
                 src={room.img}
                 alt={room.title}
                 className="w-full h-[420px] object-cover"
               />
 
-              {/* Bottom Fade Gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-
-              {/* Bottom Center Title */}
-              <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white text-md uppercase tracking-wider text-center px-4">
-                {room.title}
-              </div>
-
+              <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#f5f5f3] to-transparent"></div>
             </div>
-          ))}
-        </div>
 
+            <h3 className="text-xl font-serif text-gray-900 mt-4 mb-2 uppercase tracking-wide">
+              {room.title}
+            </h3>
+
+            <p className="text-gray-600 text-sm leading-relaxed">
+              {room.desc}
+            </p>
+
+          </div>
+        ))}
       </div>
     </section>
   );

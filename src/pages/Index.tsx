@@ -11,7 +11,7 @@ const Index = () => {
   return (
     <Layout>
       <HeroSection />
-      <SecondHeroSection/>
+      {/* <SecondHeroSection/> */}
       <RoomTypesSection />
       <ProjectsSection />
       <WhatWeOfferSection />
