@@ -173,68 +173,58 @@ const allProjects = [
   {
     id: 'natural-luxury',
     title: 'Forest Haven Dome',
-    // year: '2025',
     image: projectNatural,
     location: 'Vagamon',
   },
   {
     id: 'modern-black',
-    title: 'Midnight Luxe Dome',
-    // year: '2024',
+    title: 'Golden Mist Dome',
     image: projectBlack,
     location: 'Vagamon',
   },
   {
     id: 'wood-mode',
     title: 'Midnight Luxe Dome',
-    // year: '2024',
     image: projectWood,
     location: 'Vagamon',
   },
   {
     id: 'urban-retreat',
     title: 'Serenity Horizon Dome',
-    // year: '2024',
     image: heroImage,
     location: 'Vagamon',
   },
   {
     id: 'coastal-modern',
     title: 'Sunset Haven Dome',
-    // year: '2023',
     image: projectLast,
     location: 'Vagamon',
   },
   {
     id: 'minimalist-office',
     title: 'The Alpine Luxury Dome',
-    // year: '2023',
     image: projectWhite,
     location: 'Vagamon',
   },
   {
-    id: 'ROOM',
+    id: 'room-spa',
     title: 'Private Spa Ensuite',
-    // year: '2023',
     image: washroom,
     location: 'Vagamon',
   },
   {
-    id: 'ROOM',
+    id: 'room-suite',
     title: 'Climate Comfort Suite',
-    // year: '2023',
     image: roomLight,
     location: 'Vagamon',
   },
   {
-    id: 'ROOM',
+    id: 'room-closet',
     title: 'Modern Minimalist Restroom Design',
-    // year: '2023',
     image: roomCloset,
     location: 'Vagamon',
   },
 ];
-
 const Projects = () => {
   return (
     <Layout>
@@ -319,15 +309,13 @@ const Projects = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <Link to={`/projects/${project.id}`} className="block relative">
+                <div className="relative aspect-[4/3] overflow-hidden">
 
-                  <div className="aspect-[4/3] overflow-hidden">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover"
+                  />
 
                   <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
 
@@ -339,12 +327,15 @@ const Projects = () => {
                       {project.title}
                     </h3>
 
-                    <button className="px-5 py-2 border border-white text-white text-sm tracking-wide hover:bg-white hover:text-black transition">
-                      Explore Room
-                    </button>
+                    <Link to={`/projects/${project.id}`}>
+                      <button className="px-5 py-2 border border-white text-white text-sm tracking-wide hover:bg-white hover:text-black transition">
+                        Explore Room
+                      </button>
+                    </Link>
 
                   </div>
-                </Link>
+
+                </div>
               </motion.div>
             ))}
           </div>

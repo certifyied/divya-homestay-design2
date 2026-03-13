@@ -223,10 +223,14 @@ import { ArrowLeft, ArrowUpRight, X } from 'lucide-react';
 import { Calendar } from "lucide-react";
 import Layout from '@/components/layout/Layout';
 import projectNatural from '@/assets/ABC03860.jpg';
-import projectWhite from '@/assets/round-rug.jpg';
-import projectBlack from '@/assets/project-modern-black.jpg';
-import projectWood from '@/assets/project-wood-mode.jpg';
-import heroImage from '@/assets/hero-kitchen.jpg';
+import projectBlack from '@/assets/ABC03979.jpg';
+import projectWhite from '@/assets/ROOM03868s.jpeg';
+import projectWood from '@/assets/ABC03867 (1).jpg';
+import heroImage from '@/assets/ROOM03868s.jpeg';
+import projectLast from '@/assets/ABC03895.jpg';
+import washroom from '@/assets/WASHROOM03921.jpg';
+import roomLight from '@/assets/AC03900.jpg';
+import roomCloset from '@/assets/CLOSET03915.jpg';
 
 const projectsData: Record<string, {
   title: string;
@@ -240,60 +244,142 @@ const projectsData: Record<string, {
   materials: string[];
 }> = {
   'natural-luxury': {
-    title: 'Natural Luxury',
-    // category: 'Residential',
-    // year: '2025',
-    // location: 'Aspen, Colorado',
+    title: 'Forest Haven Dome',
     description:
       'A stunning mountain retreat that seamlessly blends modern design with natural elements. Floor-to-ceiling windows frame breathtaking forest views while warm wood tones and organic textures create an inviting atmosphere.',
     area: '4,500 sq ft',
     duration: '18 months',
-    images: [projectNatural, heroImage, projectWood],
+    images: [projectNatural],
     materials: ['Reclaimed Oak', 'Natural Stone', 'Linen Textiles', 'Brass Fixtures'],
   },
+
   'modern-black': {
-    title: 'Modern Black',
-    // category: 'Residential',
-    // year: '2024',
-    // location: 'New York, NY',
+    title: 'Golden Mist Dome',
     description:
-      'A bold urban penthouse that embraces darkness as a design feature. Deep charcoal tones, dramatic lighting, and luxurious textures create a sophisticated sanctuary in the heart of Manhattan.',
+      'A luxurious dome retreat designed for serene hilltop experiences. Warm lighting, elegant textures, and panoramic surroundings create a perfect escape for relaxation in Vagamon.',
     area: '3,200 sq ft',
     duration: '14 months',
-    images: [projectBlack, projectNatural, heroImage],
+    images: [projectBlack],
     materials: ['Black Marble', 'Velvet Upholstery', 'Smoked Glass', 'Matte Black Steel'],
   },
-  'minimalist-office': {
-    title: 'Minimalist Office',
-    // category: 'Residential',
-    // year: '2024',
-    // location: 'New York, NY',
-    description:
-      'A bold urban penthouse that embraces darkness as a design feature. Deep charcoal tones, dramatic lighting, and luxurious textures create a sophisticated sanctuary in the heart of Manhattan.',
-    area: '3,200 sq ft',
-    duration: '14 months',
-    images: [projectWhite, projectNatural, heroImage],
-    materials: ['Black Marble', 'Velvet Upholstery', 'Smoked Glass', 'Matte Black Steel'],
-  },
+
   'wood-mode': {
-    title: 'Wood Mode',
-    // category: 'Commercial',
-    // year: '2024',
-    // location: 'Portland, Oregon',
+    title: 'Midnight Luxe Dome',
     description:
-      'A Japanese-inspired commercial space that celebrates the beauty of natural wood. Every surface tells a story through carefully selected timber, creating a warm and grounding work environment.',
+      'A stylish dome designed for peaceful nights under the stars. The space blends warm wood finishes with modern luxury elements to create a cozy yet elegant glamping experience.',
     area: '2,800 sq ft',
     duration: '10 months',
-    images: [projectWood, projectBlack, projectNatural],
+    images: [projectWood],
     materials: ['Japanese Cedar', 'White Oak', 'Rice Paper Screens', 'Copper Accents'],
+  },
+
+  'urban-retreat': {
+    title: 'Serenity Horizon Dome',
+    description:
+      'A peaceful dome retreat set in the misty hills of Vagamon. Designed for relaxation, the space combines panoramic views, warm interiors, and natural textures to create a calm luxury glamping experience.',
+    area: '3,000 sq ft',
+    duration: '12 months',
+    images: [heroImage],
+    materials: ['Natural Wood Panels', 'Panoramic Glass', 'Soft Linen Fabrics', 'Ambient Lighting'],
+  },
+
+  'coastal-modern': {
+    title: 'Sunset Haven Dome',
+    description:
+      'A stunning dome designed to capture the magical sunset views of Vagamon. With cozy interiors and elegant textures, it creates the perfect romantic getaway surrounded by nature.',
+    area: '3,100 sq ft',
+    duration: '12 months',
+    images: [projectLast],
+    materials: ['Oak Wood', 'Glass Panels', 'Soft Textiles', 'Ambient Lighting'],
+  },
+
+  'minimalist-office': {
+    title: 'The Alpine Luxury Dome',
+    description:
+      'A beautifully designed luxury dome located in the scenic hills of Vagamon. Featuring elegant interiors, panoramic views, and cozy textures, this alpine-inspired retreat offers guests a peaceful and premium glamping experience surrounded by nature.',
+    area: '3,200 sq ft',
+    duration: '14 months',
+    images: [projectWhite],
+    materials: ['Panoramic Glass Panels', 'Natural Wood Interiors', 'Luxury Bedding', 'Warm Ambient Lighting'],
+  },
+
+  'room-spa': {
+    title: 'Private Spa Ensuite',
+    description:
+      'A luxurious spa-style bathroom designed with elegant fixtures and calming aesthetics, offering guests a refreshing and relaxing wellness experience.',
+    area: '1,200 sq ft',
+    duration: '6 months',
+    images: [washroom],
+    materials: ['Premium Tiles', 'Glass Shower Panels', 'Chrome Fixtures', 'Soft Lighting'],
+  },
+
+  'room-suite': {
+    title: 'Climate Comfort Suite',
+    description:
+      'A modern luxury suite designed for maximum comfort with climate-controlled interiors, cozy bedding, and stylish furnishings for a relaxing stay.',
+    area: '1,500 sq ft',
+    duration: '6 months',
+    images: [roomLight],
+    materials: ['Luxury Bedding', 'Wood Panels', 'Soft Lighting', 'Modern Furniture'],
+  },
+
+  'room-closet': {
+    title: 'Modern Minimalist Restroom Design',
+    description:
+      'A sleek minimalist restroom featuring clean lines, modern fittings, and elegant materials that reflect contemporary luxury design.',
+    area: '1,000 sq ft',
+    duration: '5 months',
+    images: [roomCloset],
+    materials: ['Ceramic Tiles', 'Matte Fixtures', 'Glass Panels', 'Minimalist Lighting'],
   },
 };
 
 const ProjectDetail = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [checkIn, setCheckIn] = useState("");
+  const [checkOut, setCheckOut] = useState("");
+  const [nameError, setNameError] = useState("");
+
   const { id } = useParams<{ id: string }>();
   const [isOpen, setIsOpen] = useState(false);
 
   const project = projectsData[id || ''] || projectsData['natural-luxury'];
+  const validateName = () => {
+    if (name.trim() === "") {
+      setNameError("Full name is required");
+      return false;
+    }
+    setNameError("");
+    return true;
+  };
+
+  const bookingMessage = `Hello, I would like to reserve a stay at Pendora Glamps.
+
+Name: ${name}
+Email: ${email}
+Check-in Date: ${checkIn || "Not selected"}
+Check-out Date: ${checkOut || "Not selected"}
+`;
+
+  const whatsappLink = `https://wa.me/919876543210?text=${encodeURIComponent(
+    bookingMessage
+  )}`;
+
+  const emailLink = `mailto:booking@pendoraglamps.com?subject=Room Reservation Request&body=${encodeURIComponent(
+    bookingMessage
+  )}`;
+
+  const handleNameChange = (e) => {
+    const value = e.target.value;
+    setName(value);
+
+    if (value.trim() === "") {
+      setNameError("Full name is required");
+    } else {
+      setNameError("");
+    }
+  };
 
   return (
     <Layout>
@@ -319,7 +405,7 @@ const ProjectDetail = () => {
             transition={{ duration: 0.8 }}
             className="mb-12"
           >
-            
+
             <h1 className="text-display-lg">{project.title}</h1>
           </motion.div>
 
@@ -417,24 +503,24 @@ const ProjectDetail = () => {
 
       {/* CTA */}
       <section className="py-16 md:py-24" style={{ backgroundColor: "#e6f2f5" }}>
-  <div className="container-wide text-center">
-    <h2 className="text-display-md mb-6">
-      Ready to start your project?
-    </h2>
+        <div className="container-wide text-center">
+          <h2 className="text-display-md mb-6">
+            Ready to start your project?
+          </h2>
 
-    <p className="text-body-lg max-w-lg mx-auto mb-8">
-      Book a private consultation and let’s bring your vision to life.
-    </p>
+          <p className="text-body-lg max-w-lg mx-auto mb-8">
+            Book a private consultation and let’s bring your vision to life.
+          </p>
 
-    <button
-      onClick={() => setIsOpen(true)}
-      className="inline-flex items-center gap-2 px-10 py-4 bg-black text-white text-sm tracking-widest uppercase transition-all duration-500 hover:bg-transparent hover:text-black border border-black"
-    >
-      Book Now
-      <ArrowUpRight className="w-4 h-4" />
-    </button>
-  </div>
-</section>
+          <button
+            onClick={() => setIsOpen(true)}
+            className="inline-flex items-center gap-2 px-10 py-4 bg-black text-white text-sm tracking-widest uppercase transition-all duration-500 hover:bg-transparent hover:text-black border border-black"
+          >
+            Book Now
+            <ArrowUpRight className="w-4 h-4" />
+          </button>
+        </div>
+      </section>
 
       {/* Modal */}
       {/* Modal */}
@@ -479,16 +565,27 @@ const ProjectDetail = () => {
 
                 <form className="space-y-5">
                   {/* Name */}
-                  <input
-                    type="text"
-                    placeholder="Full Name"
-                    className="w-full bg-transparent border border-gray-300 rounded-xl px-5 py-3 text-base placeholder-gray-400 focus:outline-none focus:border-black transition"
-                  />
+                  <div>
+                    <input
+                      type="text"
+                      placeholder="Full Name"
+                      value={name}
+                      onChange={handleNameChange}
+                      className={`w-full bg-transparent border px-5 py-3 rounded-xl placeholder-gray-400 focus:outline-none ${nameError ? "border-red-500" : "border-gray-300"
+                        }`}
+                    />
+
+                    {nameError && (
+                      <p className="text-red-500 text-xs mt-2">{nameError}</p>
+                    )}
+                  </div>
 
                   {/* Email */}
                   <input
                     type="email"
                     placeholder="Email Address"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     className="w-full bg-transparent border border-gray-300 rounded-xl px-5 py-3 text-base placeholder-gray-400 focus:outline-none focus:border-black transition"
                   />
 
@@ -500,7 +597,9 @@ const ProjectDetail = () => {
                     <div className="relative">
                       <input
                         type="date"
-                        className="w-full bg-transparent border border-gray-300 rounded-xl px-5 py-3 text-base focus:outline-none focus:border-black transition appearance-none"
+                        value={checkIn}
+                        onChange={(e) => setCheckIn(e.target.value)}
+                        className="w-full bg-transparent border border-gray-300 rounded-xl px-5 py-3 focus:outline-none"
                       />
                       <Calendar className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500 pointer-events-none" />
                     </div>
@@ -514,7 +613,9 @@ const ProjectDetail = () => {
                     <div className="relative">
                       <input
                         type="date"
-                        className="w-full bg-transparent border border-gray-300 rounded-xl px-5 py-3 text-base focus:outline-none focus:border-black transition appearance-none"
+                        value={checkOut}
+                        onChange={(e) => setCheckOut(e.target.value)}
+                        className="w-full bg-transparent border border-gray-300 rounded-xl px-5 py-3 focus:outline-none"
                       />
                       <Calendar className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500 pointer-events-none" />
                     </div>
@@ -532,7 +633,12 @@ const ProjectDetail = () => {
                   {/* Buttons */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <a
-                      href={`https://wa.me/919876543210`}
+                      href={whatsappLink}
+                      onClick={(e) => {
+                        if (!validateName()) {
+                          e.preventDefault();
+                        }
+                      }}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="border border-green-600 text-green-600 py-3 text-center uppercase tracking-[0.25em] text-xs transition-all duration-300 hover:bg-green-600 hover:text-white"

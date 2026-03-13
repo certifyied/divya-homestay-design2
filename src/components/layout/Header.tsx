@@ -251,7 +251,7 @@
 
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Calendar, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "@/assets/logo PENDORA GLAMPS logo 5-01.png";
 
@@ -265,7 +265,42 @@ const Header = () => {
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
 
+  const [name, setName] = useState("");
+  const [nameError, setNameError] = useState("");
+
   const location = useLocation();
+  const validateName = () => {
+    if (name.trim() === "") {
+      setNameError("Full name is required");
+      return false;
+    }
+    return true;
+  };
+  const bookingMessage = `Hello, I would like to book a stay at Pendora Glamps.
+
+Name: ${name}
+Check-in Date: ${startDate || "Not selected"}
+Check-out Date: ${endDate || "Not selected"}
+`;
+  const whatsappLink = `https://wa.me/918136951157?text=${encodeURIComponent(
+    bookingMessage
+  )}`;
+
+  const emailLink = `mailto:booking@pendoraglamps.com?subject=Room Booking Request&body=${encodeURIComponent(
+    bookingMessage
+  )}`;
+
+  const handleNameChange = (e) => {
+    const value = e.target.value;
+    setName(value);
+
+
+    if (value.trim() === "") {
+      setNameError("Full name is required");
+    } else {
+      setNameError("");
+    }
+  };
 
   /* Scroll Hide / Show */
   useEffect(() => {
@@ -323,9 +358,8 @@ const Header = () => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 bg-white/70 backdrop-blur-lg border-b border-white/20 transition-transform duration-300 ${
-          showNav ? "translate-y-0" : "-translate-y-full"
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 bg-white/70 backdrop-blur-lg border-b border-white/20 transition-transform duration-300 ${showNav ? "translate-y-0" : "-translate-y-full"
+          }`}
       >
         <div className="container-wide">
           <nav className="flex items-center justify-between h-[70px] md:h-[110px] lg:h-[120px]">
@@ -350,11 +384,10 @@ const Header = () => {
                   {link.name}
 
                   <span
-                    className={`absolute left-0 -bottom-1 h-[2px] bg-[#164e63] transition-all duration-300 ${
-                      location.pathname === link.path
-                        ? "w-full"
-                        : "w-0 group-hover:w-full"
-                    }`}
+                    className={`absolute left-0 -bottom-1 h-[2px] bg-[#164e63] transition-all duration-300 ${location.pathname === link.path
+                      ? "w-full"
+                      : "w-0 group-hover:w-full"
+                      }`}
                   ></span>
                 </Link>
               ))}
@@ -418,83 +451,146 @@ const Header = () => {
       </header>
 
       {/* Booking Modal */}
+
       <AnimatePresence>
         {isBookingOpen && (
           <>
+            {/* Overlay */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setIsBookingOpen(false)}
-              className="fixed inset-0 bg-black/60 backdrop-blur-md z-[60]"
+              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[60]"
             />
 
+            {/* Modal */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.92, y: 40 }}
+              initial={{ opacity: 0, scale: 0.95, y: 40 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.92, y: 40 }}
+              exit={{ opacity: 0, scale: 0.95, y: 40 }}
               transition={{ duration: 0.35 }}
-              className="fixed inset-0 z-[60] flex items-center justify-center p-4 overflow-y-auto"
+              className="fixed inset-0 z-[60] flex items-center justify-center p-4"
             >
               <div
                 onClick={(e) => e.stopPropagation()}
-                className="relative w-full max-w-xl bg-white rounded-xl shadow-2xl p-8"
+                className="relative w-full max-w-xl bg-[#f3f3f1] shadow-xl p-10"
               >
+                {/* Close */}
                 <button
                   onClick={() => setIsBookingOpen(false)}
-                  className="absolute top-5 right-5 text-gray-500 hover:text-black"
+                  className="absolute top-6 right-6 text-gray-500 hover:text-black"
                 >
                   <X className="w-5 h-5" />
                 </button>
 
-                <h2 className="text-3xl font-semibold mb-6 tracking-wide">
+                {/* Heading */}
+                <h2 className="text-4xl font-serif text-gray-900 mb-10">
                   Reserve Your Stay
                 </h2>
 
-                <form className="space-y-5">
-                  <input
-                    type="text"
-                    placeholder="Full Name"
-                    className="w-full border p-3 rounded-md"
-                  />
+                <form className="space-y-6">
 
+                  {/* Name */}
+                  <div>
+                    <input
+                      type="text"
+                      placeholder="Full Name"
+                      value={name}
+                      onChange={handleNameChange}
+                      className={`w-full bg-white border px-6 py-4 rounded-xl placeholder-gray-400 focus:outline-none 
+      ${nameError ? "border-red-500" : "border-gray-300"}`}
+                    />
+
+                    {nameError && (
+                      <p className="text-red-500 text-xs mt-2">{nameError}</p>
+                    )}
+                  </div>
+
+
+
+                  {/* Email */}
                   <input
                     type="email"
                     placeholder="Email Address"
-                    className="w-full border p-3 rounded-md"
+                    className="w-full bg-white border border-gray-300 rounded-xl px-6 py-4 text-gray-700 placeholder-gray-400 focus:outline-none"
                   />
 
-                  <input
-                    type="date"
-                    value={startDate}
-                    min={new Date().toISOString().split("T")[0]}
-                    onChange={(e) => setStartDate(e.target.value)}
-                    className="w-full border p-3 rounded-md"
-                  />
+                  {/* Check-in */}
+                  <div>
+                    <label className="block text-xs tracking-[0.35em] text-gray-500 mb-2">
+                      CHECK-IN DATE
+                    </label>
 
-                  <input
-                    type="date"
-                    value={endDate}
-                    min={startDate}
-                    onChange={(e) => setEndDate(e.target.value)}
-                    className="w-full border p-3 rounded-md"
-                  />
+                    <div className="relative">
+                      <input
+                        type="date"
+                        value={startDate}
+                        min={new Date().toISOString().split("T")[0]}
+                        onChange={(e) => setStartDate(e.target.value)}
+                        className="w-full bg-white border border-gray-300 rounded-xl px-6 py-4 focus:outline-none appearance-none"
+                      />
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <Calendar className="absolute right-5 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" />
+                    </div>
+                  </div>
+
+                  {/* Check-out */}
+                  <div>
+                    <label className="block text-xs tracking-[0.35em] text-gray-500 mb-2">
+                      CHECK-OUT DATE
+                    </label>
+
+                    <div className="relative">
+                      <input
+                        type="date"
+                        value={endDate}
+                        min={startDate}
+                        onChange={(e) => setEndDate(e.target.value)}
+                        className="w-full bg-white border border-gray-300 rounded-xl px-6 py-4 focus:outline-none appearance-none"
+                      />
+
+                      <Calendar className="absolute right-5 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" />
+                    </div>
+                  </div>
+
+                  {/* Divider */}
+                  <div className="flex items-center my-8">
+                    <div className="flex-grow h-px bg-gray-300"></div>
+                    <span className="px-4 text-xs tracking-[0.4em] text-gray-500">
+                      BOOK VIA
+                    </span>
+                    <div className="flex-grow h-px bg-gray-300"></div>
+                  </div>
+
+                  {/* Buttons */}
+                  <div className="grid grid-cols-2 gap-5">
+
                     <a
-                      href="https://wa.me/918136951157"
+                      href={whatsappLink}
+                      onClick={(e) => {
+                        if (!validateName()) {
+                          e.preventDefault();
+                        }
+                      }}
                       target="_blank"
-                      className="border-2 border-green-500 text-green-600 py-3 text-center uppercase text-sm tracking-widest hover:bg-green-500 hover:text-white transition"
+                      className="border border-green-600 text-green-600 py-3 text-center uppercase tracking-[0.25em] text-xs hover:bg-green-600 hover:text-white transition"
                     >
                       Via WhatsApp
                     </a>
 
                     <a
-                      href="mailto:booking@pendoraglamps.com"
-                      className="border-2 border-black text-black py-3 text-center uppercase text-sm tracking-widest hover:bg-black hover:text-white transition"
+                      href={emailLink}
+                      onClick={(e) => {
+                        if (!validateName()) {
+                          e.preventDefault();
+                        }
+                      }}
+                      className="border border-black text-black py-3 text-center uppercase tracking-[0.25em] text-xs hover:bg-black hover:text-white transition"
                     >
                       Via Email
                     </a>
+
                   </div>
                 </form>
               </div>
