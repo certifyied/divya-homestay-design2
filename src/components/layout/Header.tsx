@@ -364,7 +364,7 @@ const Header = () => {
             <div className="hidden lg:block ml-4 xl:ml-6">
               <button
                 onClick={() => setIsBookingOpen(true)}
-                className="bg-[#164e63] border border-[#155e75] text-white px-4 py-2 uppercase text-[13px] tracking-[0.2em] whitespace-nowrap flex items-center gap-1 transition-all duration-300 hover:bg-[#155e75]"
+                className="bg-[#164e63] border border-[#155e75] text-white px-6 py-4 uppercase text-[13px] tracking-[0.2em] whitespace-nowrap flex items-center gap-1 transition-all duration-300 hover:bg-[#155e75]"
               >
                 Book Now
               </button>

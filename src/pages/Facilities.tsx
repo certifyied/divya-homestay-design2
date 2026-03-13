@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import facilitiesHero from "@/assets/2497d151-2e7d-4570-a623-79110dfa16a0.webp";
+import facilitiesHero from "@/assets/AB03882.jpg";
 import pool from "@/assets/whatsapp-image-2024-12-17-at-11.59.21.webp";
 import dining from "@/assets/2497d151-2e7d-4570-a623-79110dfa16a0.webp";
 import games from "@/assets/2497d151-2e7d-4570-a623-79110dfa16a0.webp";
@@ -35,7 +35,7 @@ function Facilities() {
     <Layout>
 
       {/* Hero Section */}
-      <section className="relative w-full h-[55vh] md:h-[65vh] lg:h-[70vh] overflow-hidden">
+      <section className="relative w-full h-[68vh] md:h-[65vh] lg:h-[70vh] overflow-hidden">
         <img
           src={facilitiesHero}
           alt="Luxury Resort Facilities"

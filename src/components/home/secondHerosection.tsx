@@ -38,7 +38,7 @@ function SecondHeroSection() {
         <div className="text-center">
           <div className="relative">
             <img
-              src="/src/assets/pexels-beydemir-27771994.jpg"
+              src="/src/assets/ABC04057 (1) (1).jpg"
               alt="Nature"
               className="w-full h-[420px] object-cover"
             />
@@ -48,13 +48,11 @@ function SecondHeroSection() {
           </div>
 
           <h3 className="text-xl font-serif text-gray-900 mt-4 mb-2">
-            Natural Beauty Abounds
+            Scenic Hilltop Dome Retreat
           </h3>
 
           <p className="text-gray-600 text-sm leading-relaxed">
-            Pendora Glamps is nestled amidst lush green tea
-            plantations, offering breathtaking views of the
-            surrounding hills and nature.
+            Experience a unique stay in a beautifully designed dome nestled in the hills, offering breathtaking night views and a peaceful atmosphere surrounded by nature.
           </p>
         </div>
 
@@ -62,7 +60,7 @@ function SecondHeroSection() {
         <div className="text-center">
           <div className="relative">
             <img
-              src="/src/assets/photo-1713669374349-3a240c47f727.avif"
+              src="/src/assets/ABC04008.jpg"
               alt="Ambience"
               className="w-full h-[420px] object-cover"
             />
@@ -71,13 +69,11 @@ function SecondHeroSection() {
           </div>
 
           <h3 className="text-xl font-serif text-gray-900 mt-4 mb-2">
-            Tranquil Ambiance
+            Elevated Panorama Deck
           </h3>
 
           <p className="text-gray-600 text-sm leading-relaxed">
-            The resort's serene atmosphere coupled with the
-            gentle sounds of nature creates a peaceful and
-            relaxing environment.
+            Relax on a spacious elevated deck with stunning panoramic views of the surrounding greenery, creating the perfect spot to unwind and enjoy the serenity of nature.
           </p>
         </div>
 
@@ -85,7 +81,7 @@ function SecondHeroSection() {
         <div className="text-center">
           <div className="relative">
             <img
-              src="/src/assets/water-steam-fog-greenery-8k-ipad-air.jpg"
+              src="/src/assets/ABC04045.jpg"
               alt="Luxury"
               className="w-full h-[420px] object-cover"
             />
@@ -94,12 +90,11 @@ function SecondHeroSection() {
           </div>
 
           <h3 className="text-xl font-serif text-gray-900 mt-4 mb-2">
-            Luxurious Accommodations
+            Peaceful Nature Walkways
           </h3>
 
           <p className="text-gray-600 text-sm leading-relaxed">
-            Stylish and comfortable rooms provide a luxurious
-            retreat for guests to unwind and rejuvenate.
+            Take a refreshing walk along scenic pathways that wind through lush tea plantations, offering guests a calm and rejuvenating connection with nature.
           </p>
         </div>
 
@@ -107,7 +102,7 @@ function SecondHeroSection() {
         <div className="text-center">
           <div className="relative">
             <img
-              src="/src/assets/202212291728433490-36b008a7-6190-4981-ba2b-d2f0afb19f1d.avif"
+              src="/src/assets/ABC04088.jpg"
               alt="Amenities"
               className="w-full h-[420px] object-cover"
             />
@@ -116,13 +111,11 @@ function SecondHeroSection() {
           </div>
 
           <h3 className="text-xl font-serif text-gray-900 mt-4 mb-2">
-            World-Class Amenities
+            Premium Resort Facilities
           </h3>
 
           <p className="text-gray-600 text-sm leading-relaxed">
-            From spa treatments to swimming pool relaxation,
-            Pendora Glamps offers a range of amenities for
-            a perfect stay.
+            Enjoy thoughtfully designed facilities set within picturesque landscapes, combining modern comfort with the natural beauty of the surrounding hills.
           </p>
         </div>
 

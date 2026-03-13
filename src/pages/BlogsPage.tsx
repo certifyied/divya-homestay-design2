@@ -2,7 +2,7 @@ import Layout from "@/components/layout/Layout";
 import React from "react";
 import { Link } from "react-router-dom";
 
-import heroImg from "@/assets/World-Earth-Day_001.webp";
+import heroImg from "@/assets/GALLERYCOVERIMAGE.jpg";
 import blog1 from "@/assets/World-Earth-Day_001.webp";
 import blog2 from "@/assets/photo-1500530855697-b586d89ba3ee.avif";
 import blog3 from "@/assets/photo-1506744038136-46273834b3fb.avif";
@@ -93,9 +93,6 @@ function BlogsPage() {
 
                   <p className="text-sm text-gray-200 mb-3">{blog.desc}</p>
 
-                  <button className="text-sm font-semibold border-b border-white hover:text-gray-300">
-                    Read More
-                  </button>
                 </div>
               </div>
             ))}

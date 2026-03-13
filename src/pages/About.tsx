@@ -4,8 +4,8 @@ import team1 from "@/assets/Sarah-Chen-web-1024x991.jpg";
 import team2 from "@/assets/Marc_Webb_by_Gage_Skidmore_2.jpg";
 import team3 from "@/assets/968_big.jpg";
 import Layout from "@/components/layout/Layout";
-import offerImage from "@/assets/dji_mimo_20250319_173514_20250319173514_1742393975570_photo-scaled-e1748857014857-768x1026.webp";
-import heroImage from "@/assets/khanabadosh-glamps-kumrat0_1714215050 (1).jpg";
+import offerImage from "@/assets/ABOUT0260311_170805 (1).jpg";
+import heroImage from "@/assets/ABOUTCOVERIMAGEC04090.jpg";
 
 const About = () => {
   return (

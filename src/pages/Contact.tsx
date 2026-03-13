@@ -4,7 +4,7 @@ import { ArrowUpRight, MapPin, Phone, Mail } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import { useToast } from "@/hooks/use-toast";
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/mare-delle-andamane-thailandia-11-giorni-in-catamarano-main.jpg";
+import heroImage from "@/assets/ABC04088.jpg";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -66,67 +66,6 @@ const Contact = () => {
       <section className="pb-16 md:pb-24">
         <div className="container-wide">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-
-            {/* Form */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-section-title mb-8">Send us a message</h2>
-
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <input
-                  type="text"
-                  placeholder="Your Name"
-                  value={formData.name}
-                  onChange={(e) =>
-                    setFormData({ ...formData, name: e.target.value })
-                  }
-                  className="input-field"
-                  required
-                />
-
-                <input
-                  type="email"
-                  placeholder="Email Address"
-                  value={formData.email}
-                  onChange={(e) =>
-                    setFormData({ ...formData, email: e.target.value })
-                  }
-                  className="input-field"
-                  required
-                />
-
-                <input
-                  type="tel"
-                  placeholder="Phone Number"
-                  value={formData.phone}
-                  onChange={(e) =>
-                    setFormData({ ...formData, phone: e.target.value })
-                  }
-                  className="input-field"
-                />
-
-                <textarea
-                  placeholder="Tell us about your project..."
-                  value={formData.message}
-                  onChange={(e) =>
-                    setFormData({ ...formData, message: e.target.value })
-                  }
-                  className="input-field min-h-[150px] resize-none"
-                  required
-                />
-
-                <button
-                  type="submit"
-                  className="inline-flex items-center gap-2 px-10 py-4 bg-[#164e63] text-white text-sm tracking-widest uppercase transition-all duration-500 hover:bg-transparent hover:text-[#164e63] border border-[#164e63]"
-                >
-                  Send Message
-                  <ArrowUpRight className="w-4 h-4" />
-                </button>
-              </form>
-            </motion.div>
 
             {/* Contact Info */}
             <motion.div

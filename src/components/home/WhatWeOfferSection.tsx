@@ -123,10 +123,7 @@ const WhatWeOfferSection = () => {
           viewport={{ once: true }}
           className="max-w-3xl mx-auto text-gray-600 mb-20 leading-relaxed"
         >
-          At Parakkat Nature Hotel & Resorts, we pride ourselves on offering an
-          extensive selection of services that cater to the needs and luxuries
-          of all our guests, ensuring a stay filled with delightful experiences
-          and cherished memories.
+          Experience comfort, convenience, and elegance with our thoughtfully designed facilities. From cozy glamping domes to modern amenities and serene outdoor spaces, everything at Pendora Glamps is crafted to ensure a relaxing and unforgettable stay surrounded by the beauty of Vagamon.
         </motion.p>
 
         {/* Image Cards */}

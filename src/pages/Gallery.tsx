@@ -1,29 +1,28 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import galleryHero from "@/assets/pexels-andrejcook-131723.jpg";
+import galleryHero from "@/assets/ABC04045.jpg";
 import Layout from "@/components/layout/Layout";
 
 /* Gallery Images */
-import img1 from "@/assets/87da99b67e69cee29f9fc43b8ab21f69.webp";
-import img2 from "@/assets/87da99b67e69cee29f9fc43b8ab21f69.webp";
-import img3 from "@/assets/87da99b67e69cee29f9fc43b8ab21f69.webp";
-import img4 from "@/assets/87da99b67e69cee29f9fc43b8ab21f69.webp";
-import img5 from "@/assets/87da99b67e69cee29f9fc43b8ab21f69.webp";
-import img6 from "@/assets/87da99b67e69cee29f9fc43b8ab21f69.webp";
-import img7 from "@/assets/87da99b67e69cee29f9fc43b8ab21f69.webp";
-import img8 from "@/assets/87da99b67e69cee29f9fc43b8ab21f69.webp";
-import img9 from "@/assets/87da99b67e69cee29f9fc43b8ab21f69.webp";
-import img10 from "@/assets/87da99b67e69cee29f9fc43b8ab21f69.webp";
-import img11 from "@/assets/87da99b67e69cee29f9fc43b8ab21f69.webp";
-import img12 from "@/assets/87da99b67e69cee29f9fc43b8ab21f69.webp";
-import img13 from "@/assets/87da99b67e69cee29f9fc43b8ab21f69.webp";
-import img14 from "@/assets/87da99b67e69cee29f9fc43b8ab21f69.webp";
-import img15 from "@/assets/87da99b67e69cee29f9fc43b8ab21f69.webp";
+import img1 from "@/assets/ABC04057 (1).jpg";
+import img2 from "@/assets/ABC03931.jpg";
+import img3 from "@/assets/ABC04045.jpg";
+import img4 from "@/assets/ABC04088.jpg";
+import img5 from "@/assets/ABC04163.jpg";
+import img6 from "@/assets/AC03900.jpg";
+import img7 from "@/assets/GALLERY03936.jpg";
+import img8 from "@/assets/GALLRY1ABC04000.jpg";
+import img9 from "@/assets/ABC04009.jpg";
+// import img10 from "@/assets/87da99b67e69cee29f9fc43b8ab21f69.webp";
+// import img11 from "@/assets/87da99b67e69cee29f9fc43b8ab21f69.webp";
+// import img12 from "@/assets/87da99b67e69cee29f9fc43b8ab21f69.webp";
+// import img13 from "@/assets/87da99b67e69cee29f9fc43b8ab21f69.webp";
+import img14 from "@/assets/ROOM03868s.jpeg";
+import img15 from "@/assets/ABC03979.jpg";
 
 const images = [
   img1,img2,img3,img4,img5,
-  img6,img7,img8,img9,img10,
-  img11,img12,img13,img14,img15
+  img6,img7,img8,img9,img14,img15
 ];
 
 /* Different heights for masonry */

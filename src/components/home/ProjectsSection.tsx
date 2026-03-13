@@ -121,9 +121,9 @@ import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
-import projectNatural from "@/assets/project-natural-luxury.jpg";
-import projectBlack from "@/assets/project-modern-black.jpg";
-import projectWood from "@/assets/project-wood-mode.jpg";
+import projectNatural from "@/assets/ABC03860.jpg";
+import projectBlack from "@/assets/ABC03979.jpg";
+import projectWood from "@/assets/ABC03867 (1).jpg";
 
 const projects = [
   {
@@ -183,11 +183,11 @@ const ProjectsSection = () => {
               viewport={{ once: true }}
               className="text-white/90 leading-relaxed text-lg"
             >
-              With 18 distinct room categories, our resort offers luxurious
-              accommodations designed to provide comfort, elegance, and
-              unforgettable experiences. Each room blends modern amenities with
-              breathtaking natural surroundings, making it the perfect escape
-              for families, couples, and travelers seeking tranquility.
+              Wake up to breathtaking hill views, fresh mountain air, and the peaceful
+              sounds of nature in Vagamon. Our elegantly crafted domes provide a cozy
+              yet luxurious atmosphere, featuring stylish interiors, comfortable bedding,
+              and modern facilities to ensure a relaxing stay. Experience the charm of
+              glamping where outdoor beauty meets boutique-style comfort.
             </motion.p>
 
             {/* VIEW ALL BUTTON */}

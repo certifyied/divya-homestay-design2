@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import heroImg from "@/assets/munnar4.webp";
+import heroImg from "@/assets/ABC03931.jpg";
 import expImg1 from "@/assets/87da99b67e69cee29f9fc43b8ab21f69.webp";
 import expImg2 from "@/assets/87da99b67e69cee29f9fc43b8ab21f69.webp";
 import expImg3 from "@/assets/87da99b67e69cee29f9fc43b8ab21f69.webp";

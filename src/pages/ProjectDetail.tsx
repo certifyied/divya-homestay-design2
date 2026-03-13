@@ -222,7 +222,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { ArrowLeft, ArrowUpRight, X } from 'lucide-react';
 import { Calendar } from "lucide-react";
 import Layout from '@/components/layout/Layout';
-import projectNatural from '@/assets/project-natural-luxury.jpg';
+import projectNatural from '@/assets/ABC03860.jpg';
 import projectWhite from '@/assets/round-rug.jpg';
 import projectBlack from '@/assets/project-modern-black.jpg';
 import projectWood from '@/assets/project-wood-mode.jpg';
@@ -231,8 +231,8 @@ import heroImage from '@/assets/hero-kitchen.jpg';
 const projectsData: Record<string, {
   title: string;
   // category: string;
-  year: string;
-  location: string;
+  // year: string;
+  // location: string;
   description: string;
   area: string;
   duration: string;
@@ -242,8 +242,8 @@ const projectsData: Record<string, {
   'natural-luxury': {
     title: 'Natural Luxury',
     // category: 'Residential',
-    year: '2025',
-    location: 'Aspen, Colorado',
+    // year: '2025',
+    // location: 'Aspen, Colorado',
     description:
       'A stunning mountain retreat that seamlessly blends modern design with natural elements. Floor-to-ceiling windows frame breathtaking forest views while warm wood tones and organic textures create an inviting atmosphere.',
     area: '4,500 sq ft',
@@ -254,8 +254,8 @@ const projectsData: Record<string, {
   'modern-black': {
     title: 'Modern Black',
     // category: 'Residential',
-    year: '2024',
-    location: 'New York, NY',
+    // year: '2024',
+    // location: 'New York, NY',
     description:
       'A bold urban penthouse that embraces darkness as a design feature. Deep charcoal tones, dramatic lighting, and luxurious textures create a sophisticated sanctuary in the heart of Manhattan.',
     area: '3,200 sq ft',
@@ -266,8 +266,8 @@ const projectsData: Record<string, {
   'minimalist-office': {
     title: 'Minimalist Office',
     // category: 'Residential',
-    year: '2024',
-    location: 'New York, NY',
+    // year: '2024',
+    // location: 'New York, NY',
     description:
       'A bold urban penthouse that embraces darkness as a design feature. Deep charcoal tones, dramatic lighting, and luxurious textures create a sophisticated sanctuary in the heart of Manhattan.',
     area: '3,200 sq ft',
@@ -278,8 +278,8 @@ const projectsData: Record<string, {
   'wood-mode': {
     title: 'Wood Mode',
     // category: 'Commercial',
-    year: '2024',
-    location: 'Portland, Oregon',
+    // year: '2024',
+    // location: 'Portland, Oregon',
     description:
       'A Japanese-inspired commercial space that celebrates the beauty of natural wood. Every surface tells a story through carefully selected timber, creating a warm and grounding work environment.',
     area: '2,800 sq ft',
@@ -300,13 +300,13 @@ const ProjectDetail = () => {
       {/* Back Link */}
       <section className="pt-28 md:pt-32">
         <div className="container-wide">
-          <Link
+          {/* <Link
             to="/projects"
             className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Projects
-          </Link>
+          </Link> */}
         </div>
       </section>
 
@@ -319,13 +319,7 @@ const ProjectDetail = () => {
             transition={{ duration: 0.8 }}
             className="mb-12"
           >
-            <div className="flex flex-wrap items-center gap-4 mb-4">
-              {/* <span className="text-muted-foreground">{project.category}</span> */}
-              <span className="text-muted-foreground">•</span>
-              <span className="text-muted-foreground">{project.location}</span>
-              <span className="text-muted-foreground">•</span>
-              <span className="text-muted-foreground">{project.year}</span>
-            </div>
+            
             <h1 className="text-display-lg">{project.title}</h1>
           </motion.div>
 
@@ -333,7 +327,7 @@ const ProjectDetail = () => {
             initial={{ opacity: 0, scale: 0.98 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.2 }}
-            className="rounded-3xl overflow-hidden aspect-[16/9]"
+            className="overflow-hidden aspect-[16/9]"
           >
             <img
               src={project.images[0]}
@@ -422,24 +416,25 @@ const ProjectDetail = () => {
       </section> */}
 
       {/* CTA */}
-      <section className="py-16 md:py-24 bg-secondary">
-        <div className="container-wide text-center">
-          <h2 className="text-display-md mb-6">
-            Ready to start your project?
-          </h2>
-          <p className="text-body-lg max-w-lg mx-auto mb-8">
-            Book a private consultation and let’s bring your vision to life.
-          </p>
+      <section className="py-16 md:py-24" style={{ backgroundColor: "#e6f2f5" }}>
+  <div className="container-wide text-center">
+    <h2 className="text-display-md mb-6">
+      Ready to start your project?
+    </h2>
 
-          <button
-            onClick={() => setIsOpen(true)}
-            className="inline-flex items-center gap-2 px-10 py-4 bg-black text-white text-sm tracking-widest uppercase transition-all duration-500 hover:bg-transparent  hover:text-black border border-black"
-          >
-            Book Now
-            <ArrowUpRight className="w-4 h-4" />
-          </button>
-        </div>
-      </section>
+    <p className="text-body-lg max-w-lg mx-auto mb-8">
+      Book a private consultation and let’s bring your vision to life.
+    </p>
+
+    <button
+      onClick={() => setIsOpen(true)}
+      className="inline-flex items-center gap-2 px-10 py-4 bg-black text-white text-sm tracking-widest uppercase transition-all duration-500 hover:bg-transparent hover:text-black border border-black"
+    >
+      Book Now
+      <ArrowUpRight className="w-4 h-4" />
+    </button>
+  </div>
+</section>
 
       {/* Modal */}
       {/* Modal */}
@@ -467,7 +462,7 @@ const ProjectDetail = () => {
             >
               <div
                 onClick={(e) => e.stopPropagation()}
-                className="relative w-full max-w-xl bg-[#f8f8f6] rounded-2xl shadow-[0_20px_80px_rgba(0,0,0,0.15)] p-8"
+                className="relative w-full max-w-xl bg-[#f8f8f6] shadow-[0_20px_80px_rgba(0,0,0,0.15)] p-8"
               >
                 {/* Close */}
                 <button
