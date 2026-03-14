@@ -63,21 +63,23 @@ const About = () => {
 
               <div className="space-y-6 text-body-lg">
                 <p>
-                  Founded in 2015, INNERFORM began as a small studio with big
-                  dreams. Our founders believed that interior design should be
-                  accessible, personal, and transformative.
+                  Our journey started with a small beginning. Initially, we owned and managed a cottage stay where guests could come, relax, and enjoy the peaceful surroundings of nature. Through this experience, we understood what travelers truly look for — a calm place, privacy, and a refreshing environment away from busy city life.
                 </p>
 
                 <p>
-                  Today, we've grown into a full-service design studio, but our
-                  core values remain the same: listen deeply, design
-                  thoughtfully, and deliver spaces that exceed expectations.
+                  While running the cottage, we began exploring new ideas to create something more unique and memorable for our guests. During that time, we came across a photo of a dome-style stay, and that image inspired us with a new idea.
                 </p>
+
                 <p>
-                  here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+                  That inspiration led us to start our own dome stay concept. We wanted to create a place that offers a different and special experience compared to regular stays.
                 </p>
+
                 <p>
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                  Today, our dome stay is located in the middle of beautiful greenery and plantations, providing a peaceful and quiet atmosphere. It is a perfect getaway for newly married couples, couples looking for a romantic escape, and families who want to spend quality time together in nature.
+                </p>
+
+                <p>
+                  Our goal is simple — to give every guest a cozy, refreshing, and memorable stay where they can relax, enjoy the beautiful views, and experience the calmness of nature.
                 </p>
               </div>
             </motion.div>
