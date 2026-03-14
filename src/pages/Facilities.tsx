@@ -9,8 +9,8 @@ import CampfireAndMusic from "@/assets/couple-looking-each-other-singing (1).jpg
 import JeepSafari from "@/assets/panorama-view-jeep-car-hawaii (2).jpg";
 import VarattumeduTrekking from "@/assets/488680121_1131057205700296_379061321275003118_n (1).jpg";
 
-import VagamonTeaLake from "@/assets/tea-lake-boating-vagamon-vagamon-picnic-spots-9puyihxh9s.avif";
-import PalozhukumparaViewPoint from "@/assets/palozhukum-para-waterfalls-elappara-idukki-tourist-attraction-f00dj6xsce.avif";
+import VagamonTeaLake from "@/assets/photo-1713669374349-3a240c47f727.avif";
+import PalozhukumparaViewPoint from "@/assets/Mini-Trek-2-1024x683.jpg";
 import CycleRide from "@/assets/Cycling-5 (1).jpg";
 import VagamonMeadows from "@/assets/Vagamon-Meadows-Lake-1-1200x675-cropped.jpg";
 

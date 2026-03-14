@@ -161,7 +161,7 @@ import { Link } from 'react-router-dom';
 import Layout from '@/components/layout/Layout';
 import projectNatural from '@/assets/ABC03860 (1).jpg';
 import projectBlack from '@/assets/ABC03979 (2).jpg';
-import projectWhite from '@/assets/ROOM03868s (1).jpeg';
+import projectWhite from '@/assets/ABC03995 (1).jpg';
 import projectWood from '@/assets/ABC03867 (1) (1).jpg';
 import heroImage from '@/assets/ROOM03868s (1).jpeg';
 import projectLast from '@/assets/ABC03895 (1).jpg';
