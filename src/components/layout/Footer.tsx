@@ -239,42 +239,47 @@ const Footer = () => {
 
           {/* Navigation */}
           {/* Navigation */}
-<div>
-  <h4 className="text-sm uppercase tracking-widest mb-6">
-    Navigation
-  </h4>
-  <ul className="space-y-3 text-sm">
-    {["Home", "About Us", "Benefits", "Projects", "Contact"].map(
-      (item) => (
-        <li key={item}>
-          <Link
-            to={
-              item === "Home"
-                ? "/"
-                : `/${item.toLowerCase().replace(" ", "-")}`
-            }
-            className="text-white/80 hover:text-white hover:underline transition-all"
-          >
-            {item}
-          </Link>
-        </li>
-      )
-    )}
-  </ul>
-</div>
+          <div>
+            <h4 className="text-sm uppercase tracking-widest mb-6">
+              Navigation
+            </h4>
+            <ul className="space-y-3 text-sm">
+              {[
+                { name: "Home", path: "/" },
+                { name: "About Us", path: "/about" },
+                { name: "Blogs", path: "/blogs" },
+                { name: "Facilities", path: "/facilities" },
+                { name: "Contact", path: "/contact" },
+              ].map((item) => (
+                <li key={item.name}>
+                  <Link
+                    to={item.path}
+                    className="text-white/80 hover:text-white hover:underline transition-all"
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
 
           {/* Contact */}
           <div>
             <h4 className="text-sm uppercase tracking-widest mb-6">
               Contact
             </h4>
+
             <ul className="space-y-3 text-sm text-white/80">
-              <li>hello@pendoraglamps.com</li>
-              <li>+91 7856984521</li>
+              <li>info@pendoraglamps.com</li>
+              <li>+91 75580 10107</li>
+              <li>+91 90610 12312</li>
               <li>
-                Calicut, Kerala
-                <br />
-                India
+                Pendora Glamps <br />
+                Aruppukadu <br />
+                Vagamon P.O <br />
+                Vagamon <br />
+                Idukki <br />
+                Kerala 685503 <br />
               </li>
             </ul>
           </div>

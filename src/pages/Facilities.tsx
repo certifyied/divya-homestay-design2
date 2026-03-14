@@ -1,35 +1,73 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import facilitiesHero from "@/assets/AB03882.jpg";
-import pool from "@/assets/whatsapp-image-2024-12-17-at-11.59.21.webp";
-import dining from "@/assets/2497d151-2e7d-4570-a623-79110dfa16a0.webp";
-import games from "@/assets/2497d151-2e7d-4570-a623-79110dfa16a0.webp";
-import travel from "@/assets/2497d151-2e7d-4570-a623-79110dfa16a0.webp";
+import facilitiesHero from "@/assets/AB03882 (1).jpg";
+import AdventurePark from "@/assets/DSC_9575-scaled.webp";
+import SunsetHiking from "@/assets/pexels-burakbasgoze-15365481 (1).jpg";
+import Paragliding from "@/assets/pexels-photo-2132013 (1).jpeg";
+import CampfireAndMusic from "@/assets/couple-looking-each-other-singing (1).jpg";
+
+import JeepSafari from "@/assets/panorama-view-jeep-car-hawaii (2).jpg";
+import VarattumeduTrekking from "@/assets/488680121_1131057205700296_379061321275003118_n (1).jpg";
+
+import VagamonTeaLake from "@/assets/tea-lake-boating-vagamon-vagamon-picnic-spots-9puyihxh9s.avif";
+import PalozhukumparaViewPoint from "@/assets/palozhukum-para-waterfalls-elappara-idukki-tourist-attraction-f00dj6xsce.avif";
+import CycleRide from "@/assets/Cycling-5 (1).jpg";
+import VagamonMeadows from "@/assets/Vagamon-Meadows-Lake-1-1200x675-cropped.jpg";
+
 import Layout from "@/components/layout/Layout";
 
 const facilities = [
   {
-    img: pool,
-    title: "Plantation View Swimming Pool",
-    desc: "Relax and refresh in our scenic pool surrounded by lush tea plantations and cool Vagamon breezes."
+    img: AdventurePark,
+    title: "ADVENTURE PARK",
+    desc: "Experience thrilling outdoor activities and fun challenges perfect for families, friends, and adventure lovers."
   },
   {
-    img: dining,
-    title: "Multi-Cuisine Restaurant",
-    desc: "Enjoy delicious local and international dishes prepared with fresh ingredients by our experienced chefs."
+    img: SunsetHiking,
+    title: "SUNSET HIKING",
+    desc: "Take a scenic hike through Vagamon’s hills and enjoy breathtaking sunset views surrounded by nature."
   },
   {
-    img: games,
-    title: "Indoor Games & Recreation",
-    desc: "Spend quality time with family and friends enjoying indoor games and entertainment facilities."
+    img: Paragliding,
+    title: "PARAGLIDING",
+    desc: "Soar above the beautiful landscapes of Vagamon and enjoy an unforgettable aerial adventure."
   },
   {
-    img: travel,
-    title: "Travel & Tour Assistance",
-    desc: "Our team helps you explore Vagamon with guided trips, travel planning, and local sightseeing support."
+    img: CampfireAndMusic,
+    title: "CAMPFIRE AND MUSIC",
+    desc: "Gather around a warm campfire in the evening with music, laughter, and memorable moments under the stars."
+  },
+  {
+    img: JeepSafari,
+    title: "JEEP SAFARI & SIGHTSEEING",
+    desc: "Explore Vagamon’s rugged terrains and scenic viewpoints with an exciting jeep safari adventure."
+  },
+  {
+    img: VarattumeduTrekking,
+    title: "VARATTUMEDU TREKKING SPOT",
+    desc: "Discover the beautiful Varattumedu hills with a refreshing trekking experience surrounded by nature."
+  },
+  {
+    img: CycleRide,
+    title: "SUNRISE / SUNSET CYCLE RIDE",
+    desc: "Enjoy peaceful cycling through Vagamon’s misty roads during sunrise or sunset for a truly relaxing experience."
+  },
+  {
+    img: VagamonTeaLake,
+    title: "VAGAMON TEA LAKE",
+    desc: "Relax beside the peaceful Tea Lake in Vagamon, surrounded by lush greenery and calm natural beauty."
+  },
+  {
+    img: PalozhukumparaViewPoint,
+    title: "PALOZHUKUMPARA VIEW POINT",
+    desc: "Enjoy stunning panoramic views of Vagamon’s valleys and hills from the beautiful Palozhukumpara View Point."
+  },
+  {
+    img: VagamonMeadows,
+    title: "VAGAMON MEADOWS",
+    desc: "Explore the famous Vagamon Meadows, a wide stretch of green hills perfect for relaxing walks and scenic photography."
   }
 ];
-
 function Facilities() {
   return (
     <Layout>
@@ -67,7 +105,7 @@ function Facilities() {
         <p className="text-sm tracking-[0.25em] uppercase text-gray-500">
           <Link to="/" className="hover:text-black">Home</Link>
           <span className="mx-2">&gt;</span>
-          <span className="text-[#164e63]">Facilities</span>
+          <span className="text-[#164e63]">Nearby Activities</span>
         </p>
       </div>
 
@@ -76,15 +114,15 @@ function Facilities() {
         <div className="max-w-4xl mx-auto text-center">
 
           <h2 className="text-4xl font-semibold text-[#164e63] mb-6 uppercase tracking-[0.15em]">
-            Facilities
+            Our Nearby Activities
           </h2>
 
           <p className="text-gray-600 text-lg leading-relaxed">
-            Discover a range of thoughtfully designed facilities that make your
-            stay at our resort truly exceptional. From relaxing by the scenic
-            plantation-side swimming pool to enjoying delicious multi-cuisine
-            dining, every experience is crafted to offer comfort, leisure, and
-            unforgettable moments surrounded by the beauty of Vagamon’s hills.
+            Explore the many exciting activities waiting just moments from our resort.
+            From scenic trekking trails and peaceful nature walks to paragliding,
+            sightseeing, and discovering Vagamon’s beautiful valleys and viewpoints,
+            there are plenty of ways to experience adventure and relaxation while
+            surrounded by the breathtaking landscapes of Vagamon.
           </p>
 
         </div>
@@ -97,7 +135,7 @@ function Facilities() {
           {facilities.map((item, index) => (
             <div
               key={index}
-              className="relative h-[420px] overflow-hidden shadow-lg"
+              className="relative h-[420px] overflow-hidden shadow-md rounded-2xl"
             >
 
               {/* Image */}

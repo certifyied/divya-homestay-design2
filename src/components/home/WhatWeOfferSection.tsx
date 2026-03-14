@@ -82,22 +82,21 @@
 // };
 
 // export default WhatWeOfferSection;
-
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 
 /* Amenity Images */
-import pool from "@/assets/2497d151-2e7d-4570-a623-79110dfa16a0.webp";
-import restaurant from "@/assets/2497d151-2e7d-4570-a623-79110dfa16a0.webp";
-import games from "@/assets/2497d151-2e7d-4570-a623-79110dfa16a0.webp";
-import dinner from "@/assets/2497d151-2e7d-4570-a623-79110dfa16a0.webp";
+import AdventurePark from "@/assets/DSC_9575-scaled.webp";
+import SunsetHiking from "@/assets/pexels-burakbasgoze-15365481 (1).jpg";
+import Paragliding from "@/assets/pexels-photo-2132013 (1).jpeg";
+import CampfireAndMusic from "@/assets/couple-looking-each-other-singing (1).jpg";
 import { Link } from "react-router-dom";
 
 const amenities = [
-  { img: pool, title: "SWIMMING POOL" },
-  { img: restaurant, title: "RESTAURANT" },
-  { img: games, title: "INDOOR GAMES" },
-  { img: dinner, title: "FAMILY THEME DINNER" },
+  { img: AdventurePark, title: "ADVENTURE PARK" },
+  { img: SunsetHiking, title: "SUNSET HIKING" },
+  { img: Paragliding, title: "PARAGLIDING" },
+  { img: CampfireAndMusic, title: "CAMPFIRE AND MUSIC" },
 ];
 
 const WhatWeOfferSection = () => {
@@ -112,7 +111,7 @@ const WhatWeOfferSection = () => {
           viewport={{ once: true }}
           className="text-4xl md:text-5xl font-serif text-[#164e63] mb-6"
         >
-          Our Facilities
+          Nearby Activities
         </motion.h2>
 
         {/* Description */}
@@ -135,7 +134,7 @@ const WhatWeOfferSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="relative overflow-hidden group"
+              className="relative overflow-hidden rounded-md group"
             >
               {/* Image */}
               <img
@@ -161,14 +160,12 @@ const WhatWeOfferSection = () => {
         {/* Button */}
         <section className="py-16 px-6">
           <div className="max-w-4xl mx-auto text-center">
-            {/* Link Button */}
             <Link
               to="/facilities"
               className="inline-block px-8 py-3 border border-[#164e63] text-[#164e63] uppercase tracking-[0.2em] text-sm font-medium hover:bg-[#164e63] hover:text-white transition-all duration-300"
             >
               View All Facilities
             </Link>
-
           </div>
         </section>
 

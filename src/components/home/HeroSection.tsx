@@ -283,7 +283,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowDown } from "lucide-react";
 
-import hero1 from "@/assets/ABC03953 (1).jpeg";
+import hero1 from "@/assets/ABC03953 (1) (1).jpeg";
 
 const HeroSection = () => {
   return (

@@ -5,7 +5,7 @@ import team2 from "@/assets/Marc_Webb_by_Gage_Skidmore_2.jpg";
 import team3 from "@/assets/968_big.jpg";
 import Layout from "@/components/layout/Layout";
 import offerImage from "@/assets/ABOUT0260311_170805 (1).jpg";
-import heroImage from "@/assets/ABOUTCOVERIMAGEC04090.jpg";
+import heroImage from "@/assets/ABOUTCOVERIMAGEC04090 (1).jpg";
 
 const About = () => {
   return (
@@ -86,12 +86,12 @@ const About = () => {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="overflow-hidden"
+              className="overflow-hidden rounded-md group"
             >
               <img
                 src={offerImage}
                 alt="Interior detail"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
             </motion.div>
           </div>
@@ -99,7 +99,7 @@ const About = () => {
       </section>
 
       {/* Values Section */}
-      <section className="py-16 md:py-24 bg-[#164e63]">
+      {/* <section className="py-16 md:py-24 bg-[#164e63]">
         <div className="container-wide">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -144,10 +144,10 @@ const About = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Team Section */}
-      <section className="py-16 md:py-24">
+      {/* <section className="py-16 md:py-24">
         <div className="container-wide">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -208,7 +208,7 @@ const About = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
     </Layout>
   );
 };

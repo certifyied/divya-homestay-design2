@@ -249,7 +249,7 @@
 // export default Header;
 
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Calendar, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -262,11 +262,19 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isBookingOpen, setIsBookingOpen] = useState(false);
 
-  const [startDate, setStartDate] = useState("");
-  const [endDate, setEndDate] = useState("");
-
+  /* Guest Info */
   const [name, setName] = useState("");
   const [nameError, setNameError] = useState("");
+
+  /* Booking Dates */
+  const [checkIn, setCheckIn] = useState("");
+  const [checkOut, setCheckOut] = useState("");
+
+  const [checkInError, setCheckInError] = useState("");
+  const [checkOutError, setCheckOutError] = useState("");
+
+  /* Today Date (for min date restriction) */
+  const today = new Date().toISOString().split("T")[0];
 
   const location = useLocation();
   const validateName = () => {
@@ -276,17 +284,44 @@ const Header = () => {
     }
     return true;
   };
+
+  const validateDates = () => {
+    let valid = true;
+
+    if (!checkIn) {
+      setCheckInError("Check-in date is required");
+      valid = false;
+    } else if (checkIn < today) {
+      setCheckInError("Check-in must be a future date");
+      valid = false;
+    } else {
+      setCheckInError("");
+    }
+
+    if (!checkOut) {
+      setCheckOutError("Check-out date is required");
+      valid = false;
+    } else if (checkOut <= checkIn) {
+      setCheckOutError("Check-out must be after check-in");
+      valid = false;
+    } else {
+      setCheckOutError("");
+    }
+
+    return valid;
+  };
   const bookingMessage = `Hello, I would like to book a stay at Pendora Glamps.
 
 Name: ${name}
-Check-in Date: ${startDate || "Not selected"}
-Check-out Date: ${endDate || "Not selected"}
+Check-in Date: ${checkIn || "Not selected"}
+Check-out Date: ${checkOut || "Not selected"}
 `;
-  const whatsappLink = `https://wa.me/918136951157?text=${encodeURIComponent(
+
+  const whatsappLink = `https://wa.me/919061012312?text=${encodeURIComponent(
     bookingMessage
   )}`;
 
-  const emailLink = `mailto:booking@pendoraglamps.com?subject=Room Booking Request&body=${encodeURIComponent(
+  const emailLink = `mailto:info@pendoraglamps.com?subject=Room Booking Request&body=${encodeURIComponent(
     bookingMessage
   )}`;
 
@@ -517,6 +552,7 @@ Check-out Date: ${endDate || "Not selected"}
                   />
 
                   {/* Check-in */}
+                  {/* Check-in */}
                   <div>
                     <label className="block text-xs tracking-[0.35em] text-gray-500 mb-2">
                       CHECK-IN DATE
@@ -525,15 +561,20 @@ Check-out Date: ${endDate || "Not selected"}
                     <div className="relative">
                       <input
                         type="date"
-                        value={startDate}
-                        min={new Date().toISOString().split("T")[0]}
-                        onChange={(e) => setStartDate(e.target.value)}
-                        className="w-full bg-white border border-gray-300 rounded-xl px-6 py-4 focus:outline-none appearance-none"
+                        value={checkIn}
+                        min={today}
+                        onChange={(e) => setCheckIn(e.target.value)}
+                        className="w-full bg-transparent border border-gray-300 rounded-xl px-5 py-3 focus:outline-none"
                       />
 
-                      <Calendar className="absolute right-5 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" />
+                      <Calendar className="absolute right-5 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500 pointer-events-none" />
                     </div>
+
+                    {checkInError && (
+                      <p className="text-red-500 text-xs mt-2">{checkInError}</p>
+                    )}
                   </div>
+
 
                   {/* Check-out */}
                   <div>
@@ -544,14 +585,18 @@ Check-out Date: ${endDate || "Not selected"}
                     <div className="relative">
                       <input
                         type="date"
-                        value={endDate}
-                        min={startDate}
-                        onChange={(e) => setEndDate(e.target.value)}
-                        className="w-full bg-white border border-gray-300 rounded-xl px-6 py-4 focus:outline-none appearance-none"
+                        value={checkOut}
+                        min={checkIn || today}
+                        onChange={(e) => setCheckOut(e.target.value)}
+                        className="w-full bg-transparent border border-gray-300 rounded-xl px-5 py-3 focus:outline-none"
                       />
 
-                      <Calendar className="absolute right-5 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" />
+                      <Calendar className="absolute right-5 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500 pointer-events-none" />
                     </div>
+
+                    {checkOutError && (
+                      <p className="text-red-500 text-xs mt-2">{checkOutError}</p>
+                    )}
                   </div>
 
                   {/* Divider */}
@@ -569,7 +614,7 @@ Check-out Date: ${endDate || "Not selected"}
                     <a
                       href={whatsappLink}
                       onClick={(e) => {
-                        if (!validateName()) {
+                        if (!validateName() || !validateDates()) {
                           e.preventDefault();
                         }
                       }}
@@ -582,7 +627,7 @@ Check-out Date: ${endDate || "Not selected"}
                     <a
                       href={emailLink}
                       onClick={(e) => {
-                        if (!validateName()) {
+                        if (!validateName() || !validateDates()) {
                           e.preventDefault();
                         }
                       }}

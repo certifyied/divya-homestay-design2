@@ -2,36 +2,50 @@ import Layout from "@/components/layout/Layout";
 import React from "react";
 import { Link } from "react-router-dom";
 
-import heroImg from "@/assets/GALLERYCOVERIMAGE.jpg";
-import blog1 from "@/assets/World-Earth-Day_001.webp";
-import blog2 from "@/assets/photo-1500530855697-b586d89ba3ee.avif";
-import blog3 from "@/assets/photo-1506744038136-46273834b3fb.avif";
-import blog4 from "@/assets/photo-1507525428034-b723cf961d3e.avif";
+import heroImg from "@/assets/GALLERYCOVERIMAGE (1).jpg";
+import blog1 from "@/assets/ABC03931 (1).jpg";
+import blog2 from "@/assets/ABC04057 (1) (1) (1).jpg";
+import blog3 from "@/assets/ABC04009 (1).jpg";
+import blog4 from "@/assets/ABC04000 (1).jpg";
+import blog5 from "@/assets/ABC04088 (1).jpg";
+import blog6 from "@/assets/ABC04163 (1).jpg";
 
 const blogs = [
   {
     id: 1,
-    title: "Top 5 Experiences You Should Try in Thekkady",
-    desc: "Discover the best activities to enjoy during your stay in Thekkady, from jungle safaris to peaceful nature walks.",
+    title: "Top 5 Experiences You Should Try in Vagamon",
+    desc: "Discover the best things to do in Vagamon including paragliding, tea plantation walks, pine forest visits, and peaceful hilltop sunsets.",
     img: blog1,
   },
   {
     id: 2,
-    title: "Why Glamping is the Future of Luxury Travel",
-    desc: "Glamping combines nature with comfort. Learn why travelers are choosing luxury camping experiences.",
+    title: "Why Glamping in Vagamon is a Unique Experience",
+    desc: "Enjoy the beauty of nature without giving up comfort. Glamping in Vagamon offers luxury dome stays with stunning valley and mountain views.",
     img: blog2,
   },
   {
     id: 3,
-    title: "A Perfect Weekend Getaway in The Hills",
-    desc: "Escape the city and relax in nature. Here's how you can spend a perfect weekend surrounded by mountains.",
+    title: "A Perfect Weekend Getaway in Vagamon Hills",
+    desc: "Escape city life and spend a relaxing weekend surrounded by cool mountain air, rolling meadows, and scenic viewpoints.",
     img: blog3,
   },
   {
     id: 4,
-    title: "Best Time to Visit Thekkady for Nature Lovers",
-    desc: "Planning a trip? Discover the best seasons to experience wildlife, greenery, and beautiful landscapes.",
+    title: "Best Time to Visit Vagamon for Nature Lovers",
+    desc: "Planning a trip to Vagamon? Learn about the best seasons to enjoy misty hills, lush greenery, and beautiful weather.",
     img: blog4,
+  },
+  {
+    id: 5,
+    title: "Exploring Vagamon Tea Plantations",
+    desc: "Take a peaceful walk through Vagamon’s famous tea estates and experience breathtaking landscapes and fresh mountain air.",
+    img: blog5,
+  },
+  {
+    id: 6,
+    title: "Experience Luxury Dome Stay in Vagamon",
+    desc: "Stay in a unique luxury dome surrounded by nature and enjoy unforgettable nights under the stars in the beautiful hills of Vagamon.",
+    img: blog6,
   },
 ];
 
@@ -75,7 +89,7 @@ function BlogsPage() {
             {blogs.map((blog) => (
               <div
                 key={blog.id}
-                className="relative h-[420px] overflow-hidden group"
+                className="relative h-[420px] overflow-hidden rounded-md group"
               >
                 {/* Image */}
                 <img
@@ -92,7 +106,6 @@ function BlogsPage() {
                   <h2 className="text-xl font-semibold mb-2">{blog.title}</h2>
 
                   <p className="text-sm text-gray-200 mb-3">{blog.desc}</p>
-
                 </div>
               </div>
             ))}

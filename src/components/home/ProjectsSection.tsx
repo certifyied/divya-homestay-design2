@@ -121,9 +121,9 @@ import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
-import projectNatural from "@/assets/ABC03860.jpg";
-import projectBlack from "@/assets/ABC03979.jpg";
-import projectWood from "@/assets/ABC03867 (1).jpg";
+import projectNatural from "@/assets/ABC03860 (1).jpg";
+import projectBlack from "@/assets/ABC03979 (1).jpg";
+import projectWood from "@/assets/ABC03867 (1) (1).jpg";
 
 const projects = [
   {
@@ -168,11 +168,11 @@ const ProjectsSection = () => {
             viewport={{ once: true }}
             className="md:col-span-7 flex flex-col gap-6"
           >
-            <div className="aspect-[16/10] overflow-hidden">
+            <div className="aspect-[16/10] overflow-hidden rounded-lg group">
               <img
                 src={projects[0].image}
                 alt={projects[0].title}
-                className="w-full h-full object-cover hover:scale-105 transition duration-700"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
             </div>
 
@@ -208,16 +208,17 @@ const ProjectsSection = () => {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="aspect-[16/9] overflow-hidden"
+                className="aspect-[16/9] overflow-hidden rounded-md group"
               >
                 <img
                   src={proj.image}
                   alt={proj.title}
-                  className="w-full h-full object-cover hover:scale-105 transition duration-700"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </motion.div>
             ))}
           </div>
+
         </div>
       </div>
     </section>

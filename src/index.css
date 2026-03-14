@@ -256,10 +256,10 @@
     }
   }
 
-  /* .project-card {
+   .project-card {
     @apply relative overflow-hidden rounded-2xl cursor-pointer;
   }
-   */
+   
   .project-card:hover .project-card-image {
     transform: scale(1.05);
   }

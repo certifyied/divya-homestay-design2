@@ -222,15 +222,15 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { ArrowLeft, ArrowUpRight, X } from 'lucide-react';
 import { Calendar } from "lucide-react";
 import Layout from '@/components/layout/Layout';
-import projectNatural from '@/assets/ABC03860.jpg';
-import projectBlack from '@/assets/ABC03979.jpg';
-import projectWhite from '@/assets/ROOM03868s.jpeg';
-import projectWood from '@/assets/ABC03867 (1).jpg';
-import heroImage from '@/assets/ROOM03868s.jpeg';
-import projectLast from '@/assets/ABC03895.jpg';
-import washroom from '@/assets/WASHROOM03921.jpg';
-import roomLight from '@/assets/AC03900.jpg';
-import roomCloset from '@/assets/CLOSET03915.jpg';
+import projectNatural from '@/assets/ABC03860 (1).jpg';
+import projectBlack from '@/assets/ABC03979 (2).jpg';
+import projectWhite from '@/assets/ROOM03868s (1).jpeg';
+import projectWood from '@/assets/ABC03867 (1) (1).jpg';
+import heroImage from '@/assets/ROOM03868s (1).jpeg';
+import projectLast from '@/assets/ABC03895 (1).jpg';
+import washroom from '@/assets/WASHROOM03921 (1).jpg';
+import roomLight from '@/assets/AC03900 (1).jpg';
+import roomCloset from '@/assets/CLOSET03915 (1).jpg';
 
 const projectsData: Record<string, {
   title: string;
@@ -238,8 +238,8 @@ const projectsData: Record<string, {
   // year: string;
   // location: string;
   description: string;
-  area: string;
-  duration: string;
+  // area: string;
+  // duration: string;
   images: string[];
   materials: string[];
 }> = {
@@ -247,8 +247,8 @@ const projectsData: Record<string, {
     title: 'Forest Haven Dome',
     description:
       'A stunning mountain retreat that seamlessly blends modern design with natural elements. Floor-to-ceiling windows frame breathtaking forest views while warm wood tones and organic textures create an inviting atmosphere.',
-    area: '4,500 sq ft',
-    duration: '18 months',
+    // area: '4,500 sq ft',
+    // duration: '18 months',
     images: [projectNatural],
     materials: ['Reclaimed Oak', 'Natural Stone', 'Linen Textiles', 'Brass Fixtures'],
   },
@@ -257,8 +257,8 @@ const projectsData: Record<string, {
     title: 'Golden Mist Dome',
     description:
       'A luxurious dome retreat designed for serene hilltop experiences. Warm lighting, elegant textures, and panoramic surroundings create a perfect escape for relaxation in Vagamon.',
-    area: '3,200 sq ft',
-    duration: '14 months',
+    // area: '3,200 sq ft',
+    // duration: '14 months',
     images: [projectBlack],
     materials: ['Black Marble', 'Velvet Upholstery', 'Smoked Glass', 'Matte Black Steel'],
   },
@@ -267,8 +267,8 @@ const projectsData: Record<string, {
     title: 'Midnight Luxe Dome',
     description:
       'A stylish dome designed for peaceful nights under the stars. The space blends warm wood finishes with modern luxury elements to create a cozy yet elegant glamping experience.',
-    area: '2,800 sq ft',
-    duration: '10 months',
+    // area: '2,800 sq ft',
+    // duration: '10 months',
     images: [projectWood],
     materials: ['Japanese Cedar', 'White Oak', 'Rice Paper Screens', 'Copper Accents'],
   },
@@ -277,8 +277,8 @@ const projectsData: Record<string, {
     title: 'Serenity Horizon Dome',
     description:
       'A peaceful dome retreat set in the misty hills of Vagamon. Designed for relaxation, the space combines panoramic views, warm interiors, and natural textures to create a calm luxury glamping experience.',
-    area: '3,000 sq ft',
-    duration: '12 months',
+    // area: '3,000 sq ft',
+    // duration: '12 months',
     images: [heroImage],
     materials: ['Natural Wood Panels', 'Panoramic Glass', 'Soft Linen Fabrics', 'Ambient Lighting'],
   },
@@ -287,8 +287,8 @@ const projectsData: Record<string, {
     title: 'Sunset Haven Dome',
     description:
       'A stunning dome designed to capture the magical sunset views of Vagamon. With cozy interiors and elegant textures, it creates the perfect romantic getaway surrounded by nature.',
-    area: '3,100 sq ft',
-    duration: '12 months',
+    // area: '3,100 sq ft',
+    // duration: '12 months',
     images: [projectLast],
     materials: ['Oak Wood', 'Glass Panels', 'Soft Textiles', 'Ambient Lighting'],
   },
@@ -297,8 +297,8 @@ const projectsData: Record<string, {
     title: 'The Alpine Luxury Dome',
     description:
       'A beautifully designed luxury dome located in the scenic hills of Vagamon. Featuring elegant interiors, panoramic views, and cozy textures, this alpine-inspired retreat offers guests a peaceful and premium glamping experience surrounded by nature.',
-    area: '3,200 sq ft',
-    duration: '14 months',
+    // area: '3,200 sq ft',
+    // duration: '14 months',
     images: [projectWhite],
     materials: ['Panoramic Glass Panels', 'Natural Wood Interiors', 'Luxury Bedding', 'Warm Ambient Lighting'],
   },
@@ -307,8 +307,8 @@ const projectsData: Record<string, {
     title: 'Private Spa Ensuite',
     description:
       'A luxurious spa-style bathroom designed with elegant fixtures and calming aesthetics, offering guests a refreshing and relaxing wellness experience.',
-    area: '1,200 sq ft',
-    duration: '6 months',
+    // area: '1,200 sq ft',
+    // duration: '6 months',
     images: [washroom],
     materials: ['Premium Tiles', 'Glass Shower Panels', 'Chrome Fixtures', 'Soft Lighting'],
   },
@@ -317,8 +317,8 @@ const projectsData: Record<string, {
     title: 'Climate Comfort Suite',
     description:
       'A modern luxury suite designed for maximum comfort with climate-controlled interiors, cozy bedding, and stylish furnishings for a relaxing stay.',
-    area: '1,500 sq ft',
-    duration: '6 months',
+    // area: '1,500 sq ft',
+    // duration: '6 months',
     images: [roomLight],
     materials: ['Luxury Bedding', 'Wood Panels', 'Soft Lighting', 'Modern Furniture'],
   },
@@ -327,8 +327,8 @@ const projectsData: Record<string, {
     title: 'Modern Minimalist Restroom Design',
     description:
       'A sleek minimalist restroom featuring clean lines, modern fittings, and elegant materials that reflect contemporary luxury design.',
-    area: '1,000 sq ft',
-    duration: '5 months',
+    // area: '1,000 sq ft',
+    // duration: '5 months',
     images: [roomCloset],
     materials: ['Ceramic Tiles', 'Matte Fixtures', 'Glass Panels', 'Minimalist Lighting'],
   },
@@ -344,6 +344,11 @@ const ProjectDetail = () => {
   const { id } = useParams<{ id: string }>();
   const [isOpen, setIsOpen] = useState(false);
 
+  const [checkInError, setCheckInError] = useState("");
+  const [checkOutError, setCheckOutError] = useState("");
+
+  const today = new Date().toISOString().split("T")[0];
+
   const project = projectsData[id || ''] || projectsData['natural-luxury'];
   const validateName = () => {
     if (name.trim() === "") {
@@ -354,6 +359,32 @@ const ProjectDetail = () => {
     return true;
   };
 
+  const validateDates = () => {
+    let valid = true;
+
+    if (!checkIn) {
+      setCheckInError("Check-in date is required");
+      valid = false;
+    } else if (checkIn < today) {
+      setCheckInError("Check-in must be a future date");
+      valid = false;
+    } else {
+      setCheckInError("");
+    }
+
+    if (!checkOut) {
+      setCheckOutError("Check-out date is required");
+      valid = false;
+    } else if (checkOut <= checkIn) {
+      setCheckOutError("Check-out must be after check-in");
+      valid = false;
+    } else {
+      setCheckOutError("");
+    }
+
+    return valid;
+  };
+
   const bookingMessage = `Hello, I would like to reserve a stay at Pendora Glamps.
 
 Name: ${name}
@@ -362,11 +393,11 @@ Check-in Date: ${checkIn || "Not selected"}
 Check-out Date: ${checkOut || "Not selected"}
 `;
 
-  const whatsappLink = `https://wa.me/919876543210?text=${encodeURIComponent(
+  const whatsappLink = `https://wa.me/919061012312?text=${encodeURIComponent(
     bookingMessage
   )}`;
 
-  const emailLink = `mailto:booking@pendoraglamps.com?subject=Room Reservation Request&body=${encodeURIComponent(
+  const emailLink = `mailto:info@pendoraglamps.com?subject=Room Booking Request&body=${encodeURIComponent(
     bookingMessage
   )}`;
 
@@ -413,7 +444,7 @@ Check-out Date: ${checkOut || "Not selected"}
             initial={{ opacity: 0, scale: 0.98 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.2 }}
-            className="overflow-hidden aspect-[16/9]"
+            className="overflow-hidden aspect-[16/9] rounded-2xl"
           >
             <img
               src={project.images[0]}
@@ -447,7 +478,7 @@ Check-out Date: ${checkOut || "Not selected"}
               transition={{ delay: 0.1 }}
               className="space-y-6"
             >
-              <div>
+              {/* <div>
                 <p className="text-muted-foreground text-sm uppercase tracking-wider mb-1">
                   Area
                 </p>
@@ -458,8 +489,8 @@ Check-out Date: ${checkOut || "Not selected"}
                   Duration
                 </p>
                 <p className="text-xl font-medium">{project.duration}</p>
-              </div>
-              <div>
+              </div> */}
+              {/* <div>
                 <p className="text-muted-foreground text-sm uppercase tracking-wider mb-3">
                   Materials
                 </p>
@@ -473,7 +504,7 @@ Check-out Date: ${checkOut || "Not selected"}
                     </span>
                   ))}
                 </div>
-              </div>
+              </div> */}
             </motion.div>
           </div>
         </div>
@@ -598,9 +629,13 @@ Check-out Date: ${checkOut || "Not selected"}
                       <input
                         type="date"
                         value={checkIn}
+                        min={today}
                         onChange={(e) => setCheckIn(e.target.value)}
                         className="w-full bg-transparent border border-gray-300 rounded-xl px-5 py-3 focus:outline-none"
                       />
+                      {checkInError && (
+                        <p className="text-red-500 text-xs mt-2">{checkInError}</p>
+                      )}
                       <Calendar className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500 pointer-events-none" />
                     </div>
                   </div>
@@ -614,9 +649,13 @@ Check-out Date: ${checkOut || "Not selected"}
                       <input
                         type="date"
                         value={checkOut}
+                        min={checkIn}
                         onChange={(e) => setCheckOut(e.target.value)}
                         className="w-full bg-transparent border border-gray-300 rounded-xl px-5 py-3 focus:outline-none"
                       />
+                      {checkOutError && (
+                        <p className="text-red-500 text-xs mt-2">{checkOutError}</p>
+                      )}
                       <Calendar className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500 pointer-events-none" />
                     </div>
                   </div>
@@ -635,7 +674,7 @@ Check-out Date: ${checkOut || "Not selected"}
                     <a
                       href={whatsappLink}
                       onClick={(e) => {
-                        if (!validateName()) {
+                        if (!validateName() || !validateDates()) {
                           e.preventDefault();
                         }
                       }}
@@ -647,8 +686,13 @@ Check-out Date: ${checkOut || "Not selected"}
                     </a>
 
                     <a
-                      href={`mailto:booking@pendoraglamps.com`}
-                      className="border border-black text-black py-3 text-center uppercase tracking-[0.25em] text-xs transition-all duration-300 hover:bg-black hover:text-white"
+                      href={emailLink}
+                      onClick={(e) => {
+                        if (!validateName() || !validateDates()) {
+                          e.preventDefault();
+                        }
+                      }}
+                      className="border border-black text-black py-3 text-center uppercase tracking-[0.25em] text-xs hover:bg-black hover:text-white transition"
                     >
                       Via Email
                     </a>

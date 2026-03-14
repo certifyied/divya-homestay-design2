@@ -159,15 +159,15 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import Layout from '@/components/layout/Layout';
-import projectNatural from '@/assets/ABC03860.jpg';
-import projectBlack from '@/assets/ABC03979.jpg';
-import projectWhite from '@/assets/ROOM03868s.jpeg';
-import projectWood from '@/assets/ABC03867 (1).jpg';
-import heroImage from '@/assets/ROOM03868s.jpeg';
-import projectLast from '@/assets/ABC03895.jpg';
-import washroom from '@/assets/WASHROOM03921.jpg';
-import roomLight from '@/assets/AC03900.jpg';
-import roomCloset from '@/assets/CLOSET03915.jpg';
+import projectNatural from '@/assets/ABC03860 (1).jpg';
+import projectBlack from '@/assets/ABC03979 (2).jpg';
+import projectWhite from '@/assets/ROOM03868s (1).jpeg';
+import projectWood from '@/assets/ABC03867 (1) (1).jpg';
+import heroImage from '@/assets/ROOM03868s (1).jpeg';
+import projectLast from '@/assets/ABC03895 (1).jpg';
+import washroom from '@/assets/WASHROOM03921 (1).jpg';
+import roomLight from '@/assets/AC03900 (1).jpg';
+import roomCloset from '@/assets/CLOSET03915 (1).jpg';
 
 const allProjects = [
   {
@@ -309,7 +309,7 @@ const Projects = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <div className="relative aspect-[4/3] overflow-hidden">
+                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
 
                   <img
                     src={project.image}

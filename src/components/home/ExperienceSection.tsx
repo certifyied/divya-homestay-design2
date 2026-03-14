@@ -3,31 +3,37 @@ import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
+import img1 from "@/assets/ABC03893 (1).jpg";
+import img2 from "@/assets/ABC04000 (1).jpg";
+import img3 from "@/assets/couple-looking-each-other-singing (1).jpg";
+import img4 from "@/assets/ABC04045 (1).jpg";
+import img5 from "@/assets/ABC04163 (1).jpg";
+
 const experiences = [
   {
     title: "Luxury Stay",
     desc: "Enjoy a premium glamping experience surrounded by nature.",
-    img: "https://images.unsplash.com/photo-1505691938895-1758d7feb511",
+    img: img1,
   },
   {
     title: "Mountain View",
     desc: "Wake up to breathtaking mountain scenery every morning.",
-    img: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
+    img: img2,
   },
   {
     title: "Camp Fire Nights",
     desc: "Relax with cozy campfire nights under the stars.",
-    img: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429",
+    img: img3,
   },
   {
     title: "Nature Walk",
     desc: "Explore beautiful trails and lush green surroundings.",
-    img: "https://images.unsplash.com/photo-1501785888041-af3ef285b470",
+    img: img4,
   },
   {
     title: "Forest Camping",
     desc: "Experience peaceful nights deep inside nature.",
-    img: "https://images.unsplash.com/photo-1501785888041-af3ef285b470",
+    img: img5,
   },
 ];
 

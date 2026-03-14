@@ -1,40 +1,40 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import heroImg from "@/assets/ABC03931.jpg";
-import expImg1 from "@/assets/87da99b67e69cee29f9fc43b8ab21f69.webp";
-import expImg2 from "@/assets/87da99b67e69cee29f9fc43b8ab21f69.webp";
-import expImg3 from "@/assets/87da99b67e69cee29f9fc43b8ab21f69.webp";
-import expImg4 from "@/assets/87da99b67e69cee29f9fc43b8ab21f69.webp";
-import expImg5 from "@/assets/87da99b67e69cee29f9fc43b8ab21f69.webp";
+import heroImg from "@/assets/ABC03931 (1).jpg";
+import expImg1 from "@/assets/ABC03895 (1).jpg";
+import expImg2 from "@/assets/ABC04000 (1).jpg";
+import expImg3 from "@/assets/couple-looking-each-other-singing-cpoy.jpg";
+import expImg4 from "@/assets/ABC04045 (1).jpg";
+import expImg5 from "@/assets/ABC04163 (1).jpg";
 
 import Layout from "@/components/layout/Layout";
 
 const experiences = [
   {
     img: expImg1,
-    title: "Campfire Under the Stars",
-    desc: "Gather around a warm campfire and enjoy magical evenings under the starlit sky. Share stories and laughter while surrounded by peaceful hill views.",
+    title: "Luxury Stay",
+    desc: "Enjoy a premium glamping experience surrounded by nature.",
   },
   {
     img: expImg2,
-    title: "Nature Walk",
-    desc: "Explore scenic trails and refreshing greenery while enjoying a peaceful nature walk through the hills.",
+    title: "Mountain View",
+    desc: "Wake up to breathtaking mountain scenery every morning.",
   },
   {
     img: expImg3,
-    title: "Luxury Stay",
-    desc: "Experience a relaxing luxury stay surrounded by misty mountains and serene natural beauty.",
+    title: "Camp Fire Nights",
+    desc: "Relax with cozy campfire nights under the stars.",
   },
   {
     img: expImg4,
-    title: "Mountain Viewpoints",
-    desc: "Witness breathtaking panoramic views of the mountains and valleys during sunrise and sunset.",
+    title: "Nature Walk",
+    desc: "Explore beautiful trails and lush green surroundings.",
   },
   {
     img: expImg5,
-    title: "Outdoor Dining",
-    desc: "Enjoy delicious meals in a beautiful outdoor setting with fresh air and stunning hill views.",
+    title: "Forest Camping",
+    desc: "Experience peaceful nights deep inside nature.",
   },
 ];
 

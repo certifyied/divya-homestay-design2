@@ -1,8 +1,8 @@
 import React from "react";
 
-import domeRetreat from "@/assets/ABC04057 (1) (1).jpg";
-import panoramaDeck from "@/assets/ABC04008.jpg";
-import natureWalkway from "@/assets/ABC04045.jpg";
+import domeRetreat from "@/assets/ABC04057 (1) (1) (1).jpg";
+import panoramaDeck from "@/assets/ABC04008 (1).jpg";
+import natureWalkway from "@/assets/ABC04045 (1).jpg";
 
 const rooms = [
   {
@@ -52,15 +52,15 @@ function RoomTypesSection() {
         {rooms.map((room, index) => (
           <div key={index} className="text-center">
 
-            <div className="relative">
-              <img
-                src={room.img}
-                alt={room.title}
-                className="w-full h-[420px] object-cover"
-              />
+            <div className="relative rounded-t-md overflow-hidden group">
+  <img
+    src={room.img}
+    alt={room.title}
+    className="w-full h-[420px] object-cover transition-transform duration-500 group-hover:scale-105"
+  />
 
-              <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#f5f5f3] to-transparent"></div>
-            </div>
+  <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#f5f5f3] to-transparent"></div>
+</div>
 
             <h3 className="text-xl font-serif text-gray-900 mt-4 mb-2 uppercase tracking-wide">
               {room.title}

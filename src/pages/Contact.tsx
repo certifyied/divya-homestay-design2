@@ -4,7 +4,7 @@ import { ArrowUpRight, MapPin, Phone, Mail } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import { useToast } from "@/hooks/use-toast";
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/ABC04088.jpg";
+import heroImage from "@/assets/ABC04088 (1).jpg";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -78,15 +78,15 @@ const Contact = () => {
               <div className="space-y-8">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-[#164e63]/10 rounded-xl flex items-center justify-center">
-                    <MapPin className="w-5 h-5" />
+                    <MapPin className="w-5 h-5 text-[#164e63]" />
                   </div>
-                  <div>
-                    <h3 className="font-medium mb-1">Studio Location</h3>
-                    <p className="text-muted-foreground">
-                      123 Design District <br />
-                      New York, NY 10001
-                    </p>
-                  </div>
+
+                  <p className="text-muted-foreground leading-relaxed">
+                    Pendora Glamps <br />
+                    Aruppukadu, Vagamon P.O <br />
+                    Vagamon, Idukki <br />
+                    Kerala 685503
+                  </p>
                 </div>
 
                 <div className="flex items-start gap-4">
@@ -96,7 +96,10 @@ const Contact = () => {
                   <div>
                     <h3 className="font-medium mb-1">Phone</h3>
                     <p className="text-muted-foreground">
-                      +1 (555) 123-4567
+                      +91 90610 12312
+                    </p>
+                    <p className="text-muted-foreground">
+                      +91 7558010107
                     </p>
                   </div>
                 </div>
@@ -108,7 +111,7 @@ const Contact = () => {
                   <div>
                     <h3 className="font-medium mb-1">Email</h3>
                     <p className="text-muted-foreground">
-                      hello@innerform.studio
+                      info@pendoraglamps.com
                     </p>
                   </div>
                 </div>
@@ -119,16 +122,15 @@ const Contact = () => {
                 <h3 className="font-medium mb-4">Office Hours</h3>
                 <div className="space-y-2 text-muted-foreground">
                   <div className="flex justify-between">
-                    <span>Monday - Friday</span>
-                    <span>9:00 AM - 6:00 PM</span>
+                    <span>Sunday - Saturday</span>
+                    <span>24Hrs</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Saturday</span>
-                    <span>By Appointment</span>
+                    <span>Sunday afternoon 3PM - 6PM</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Sunday</span>
-                    <span>Closed</span>
+                    <p>Working on everyday</p>
                   </div>
                 </div>
               </div>
