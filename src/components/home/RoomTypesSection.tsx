@@ -53,14 +53,14 @@ function RoomTypesSection() {
           <div key={index} className="text-center">
 
             <div className="relative rounded-t-md overflow-hidden group">
-  <img
-    src={room.img}
-    alt={room.title}
-    className="w-full h-[420px] object-cover transition-transform duration-500 group-hover:scale-105"
-  />
+              <img
+                src={room.img}
+                alt={room.title}
+                className="w-full h-[420px] object-cover"
+              />
 
-  <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#f5f5f3] to-transparent"></div>
-</div>
+              <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#f5f5f3] to-transparent"></div>
+            </div>
 
             <h3 className="text-xl font-serif text-gray-900 mt-4 mb-2 uppercase tracking-wide">
               {room.title}

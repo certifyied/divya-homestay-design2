@@ -82,7 +82,6 @@
 // };
 
 // export default WhatWeOfferSection;
-import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 
 /* Amenity Images */
@@ -105,45 +104,30 @@ const WhatWeOfferSection = () => {
       <div className="max-w-7xl mx-auto px-6 text-center">
 
         {/* Heading */}
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-serif text-[#164e63] mb-6"
-        >
+        <h2 className="text-4xl md:text-5xl font-serif text-[#164e63] mb-6">
           Nearby Activities
-        </motion.h2>
+        </h2>
 
         {/* Description */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
-          viewport={{ once: true }}
-          className="max-w-3xl mx-auto text-gray-600 mb-20 leading-relaxed"
-        >
+        <p className="max-w-3xl mx-auto text-gray-600 mb-20 leading-relaxed">
           Experience comfort, convenience, and elegance with our thoughtfully designed facilities. From cozy glamping domes to modern amenities and serene outdoor spaces, everything at Pendora Glamps is crafted to ensure a relaxing and unforgettable stay surrounded by the beauty of Vagamon.
-        </motion.p>
+        </p>
 
         {/* Image Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {amenities.map((item, index) => (
-            <motion.div
+          {amenities.map((item) => (
+            <div
               key={item.title}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="relative overflow-hidden rounded-md group"
+              className="relative overflow-hidden rounded-md"
             >
               {/* Image */}
               <img
                 src={item.img}
                 alt={item.title}
-                className="w-full h-[520px] object-cover transition-transform duration-700 group-hover:scale-110"
+                className="w-full h-[520px] object-cover"
               />
 
-              {/* Bottom Gradient */}
+              {/* Gradient */}
               <div className="absolute inset-0 bg-gradient-to-t from-[#f5f5f5] via-transparent to-transparent"></div>
 
               {/* Title */}
@@ -153,21 +137,19 @@ const WhatWeOfferSection = () => {
                 </h3>
                 <div className="w-12 h-[2px] bg-[#164e63] mx-auto mt-2"></div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* Button */}
-        <section className="py-16 px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <Link
-              to="/facilities"
-              className="inline-block px-8 py-3 border border-[#164e63] text-[#164e63] uppercase tracking-[0.2em] text-sm font-medium hover:bg-[#164e63] hover:text-white transition-all duration-300"
-            >
-              View All Facilities
-            </Link>
-          </div>
-        </section>
+        <div className="py-16">
+          <Link
+            to="/facilities"
+            className="inline-block px-8 py-3 border border-[#164e63] text-[#164e63] uppercase tracking-[0.2em] text-sm font-medium hover:bg-[#164e63] hover:text-white transition-all duration-300"
+          >
+            View All Facilities
+          </Link>
+        </div>
 
       </div>
     </section>

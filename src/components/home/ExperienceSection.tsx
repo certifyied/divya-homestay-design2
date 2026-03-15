@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -68,15 +67,13 @@ function ExperienceSection() {
   }, [visibleCards]);
 
   const nextSlide = () => {
-    if (index < experiences.length - visibleCards) {
-      setIndex(index + 1);
-    }
+    setIndex((prev) =>
+      prev < experiences.length - visibleCards ? prev + 1 : prev
+    );
   };
 
   const prevSlide = () => {
-    if (index > 0) {
-      setIndex(index - 1);
-    }
+    setIndex((prev) => (prev > 0 ? prev - 1 : prev));
   };
 
   return (
@@ -88,23 +85,24 @@ function ExperienceSection() {
 
         <div className="relative">
           <div className="overflow-hidden">
-            <motion.div
+            <div
               ref={sliderRef}
-              animate={{ x: -(index * cardWidth) }}
-              transition={{ duration: 0.5 }}
               className="flex gap-6"
+              style={{
+                transform: `translateX(-${index * cardWidth}px)`,
+                transition: "transform 0.5s ease",
+              }}
             >
               {experiences.map((item, i) => (
-                <motion.div
+                <div
                   ref={i === 0 ? cardRef : null}
                   key={i}
-                  whileHover={{ scale: 1.05 }}
-                  className="relative min-w-full sm:min-w-[50%] lg:min-w-[33.333%] overflow-hidden shadow-lg group"
+                  className="relative min-w-full sm:min-w-[50%] lg:min-w-[33.333%] overflow-hidden shadow-lg"
                 >
                   <img
                     src={item.img}
                     alt={item.title}
-                    className="w-full h-[520px] object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-[520px] object-cover"
                   />
 
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
@@ -115,26 +113,30 @@ function ExperienceSection() {
                     </h3>
                     <p className="text-sm text-gray-200">{item.desc}</p>
                   </div>
-                </motion.div>
+                </div>
               ))}
-            </motion.div>
+            </div>
           </div>
 
-          {/* Left */}
-          <button
-            onClick={prevSlide}
-            className="absolute left-2 sm:left-[-20px] top-1/2 -translate-y-1/2 bg-white shadow-md w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center hover:bg-gray-200 z-10"
-          >
-            ‹
-          </button>
+          {/* Left Arrow */}
+          {index > 0 && (
+            <button
+              onClick={prevSlide}
+              className="absolute left-2 sm:left-[-20px] top-1/2 -translate-y-1/2 bg-white shadow-md w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center hover:bg-gray-200 z-10"
+            >
+              ‹
+            </button>
+          )}
 
-          {/* Right */}
-          <button
-            onClick={nextSlide}
-            className="absolute right-2 sm:right-[-20px] top-1/2 -translate-y-1/2 bg-white shadow-md w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center hover:bg-gray-200 z-10"
-          >
-            ›
-          </button>
+          {/* Right Arrow */}
+          {index < experiences.length - visibleCards && (
+            <button
+              onClick={nextSlide}
+              className="absolute right-2 sm:right-[-20px] top-1/2 -translate-y-1/2 bg-white shadow-md w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center hover:bg-gray-200 z-10"
+            >
+              ›
+            </button>
+          )}
         </div>
 
         <div className="flex justify-center mt-14">
