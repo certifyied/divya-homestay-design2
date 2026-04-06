@@ -9,7 +9,7 @@ function Videosection() {
                 {/* LEFT - Video */}
                 <div className="relative group w-full rounded-3xl overflow-hidden shadow-2xl">
                     <video
-                        src="src/assets/PENDORA REEL.mp4"
+                        src="/public/PENDORA REEL.mp4"
                         autoPlay
                         loop
                         muted
