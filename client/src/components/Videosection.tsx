@@ -1,4 +1,5 @@
 import React from "react";
+import video from "../assets/pendora-reel.mp4";
 
 function Videosection() {
     return (
@@ -9,7 +10,7 @@ function Videosection() {
                 {/* LEFT - Video */}
                 <div className="relative group w-full rounded-3xl overflow-hidden shadow-2xl">
                     <video
-                        src="/public/Video.mp4"
+                        src={video}
                         autoPlay
                         loop
                         muted
