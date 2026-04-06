@@ -8,14 +8,14 @@ function Videosection() {
 
                 {/* LEFT - Video */}
                 <div className="relative group w-full rounded-3xl overflow-hidden shadow-2xl">
-                    {/* <video
-                        src="src/assets/PENDORA REEL.MOV"
+                    <video
+                        src="src/assets/PENDORA REEL.mp4"
                         autoPlay
                         loop
                         muted
                         playsInline
                         className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
-                    /> */}
+                    />
 
                     {/* Overlay */}
                     <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition"></div>
