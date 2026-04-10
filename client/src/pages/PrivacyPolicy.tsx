@@ -4,7 +4,7 @@ const PrivacyPolicy = () => {
   return (
     <Layout>
       <div className="max-w-4xl mx-auto px-6 py-12 text-gray-700 mt-16 md:mt-20 lg:mt-24 leading-relaxed">
-        
+
         <h1 className="text-3xl font-semibold mb-6">
           Privacy Policy – Pendora Glamps
         </h1>
@@ -94,6 +94,7 @@ const PrivacyPolicy = () => {
         <ul className="list-disc pl-6 space-y-1 mb-4">
           <li>2 Adults (Father & Mother)</li>
           <li>1 Child</li>
+          <li>10,000 + GST</li>
         </ul>
 
         <p className="mb-2 font-medium">Additional guest charges:</p>
