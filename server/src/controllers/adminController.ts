@@ -259,13 +259,15 @@ export const loginAdmin = async (req: Request, res: Response) => {
       }
     );
 
+    const isLocalhost = req.headers.origin?.includes("localhost") || req.headers.origin?.includes("127.0.0.1");
+
     res.cookie("admin_token", token, {
       httpOnly: true,
-      secure: true,
-      sameSite: "none",
+      secure: !isLocalhost,
+      sameSite: isLocalhost ? "lax" : "none",
       maxAge: 24 * 60 * 60 * 1000,
       path: "/",
-      domain: ".pendoraglamps.com"
+      ...(isLocalhost ? {} : { domain: ".pendoraglamps.com" })
     });
 
     console.log("🎫 Token generated ==== ", token);
@@ -355,10 +357,14 @@ export const checkAdmin = (req: Request, res: Response) => {
 //LOGOUT
 export const adminLogout = async (req: Request, res: Response) => {
   try {
+    const isLocalhost = req.headers.origin?.includes("localhost") || req.headers.origin?.includes("127.0.0.1");
+
     res.clearCookie("admin_token", {
       httpOnly: true,
-      secure: true,      // use false if localhost
-      sameSite: "none",  // use "lax" for localhost
+      secure: !isLocalhost,
+      sameSite: isLocalhost ? "lax" : "none",
+      path: "/",
+      ...(isLocalhost ? {} : { domain: ".pendoraglamps.com" })
     });
 
     return res.status(200).json({

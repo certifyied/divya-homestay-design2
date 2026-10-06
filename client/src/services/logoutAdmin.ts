@@ -2,7 +2,7 @@ import API from "../utils/axios";
 
 export const logoutAdmin = async () => {
   try {
-    const res = await API.post("/logout");
+    const res = await API.post("/admin-logout");
 
     localStorage.removeItem("admin");
 
